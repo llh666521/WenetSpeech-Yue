@@ -21,8 +21,11 @@ This is the official repository 👑 for the WenetSpeech-Yue dataset and the sou
 
 ## WenetSpeech-Pipe
 ### Audio Collection
+Audio Collection includes domain definition, audio crawling and VAD.
 ### Speaker Attribute Annotation
+Speaker Attribute Annotation includes speaker diarization, age and gender annotation
 ### Speech Quality Annotation
+Speech Quality Annotation includes bandwidth detection, SNR and MOS prediction 
 ### Automatic Speech Recognition
 ### Text Postprocessing
 <div align="center"><img width="300px" src="https://github.com/llh666521/WenetSpeech-Yue/blob/main/figs/text_processing.svg" /></div>
