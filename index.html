@@ -57,42 +57,44 @@
 
     <h3 style="text-align: center;">Data Samples<a name="data_samples"></a></h3>
 
-    <table class="center-table">
-      <thead>
-        <tr>
-          <th>Domain</th>
-          <th>Sample 1</th>
-          <th>Sample 2</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Storytelling</td>
-          <td><audio controls src="samples/story_1.wav"></audio></td>
-          <td><audio controls src="samples/story_2.wav"></audio></td>
-        </tr>
-        <tr>
-          <td>Entertainment</td>
-          <td><audio controls src="samples/ent_1.wav"></audio></td>
-          <td><audio controls src="samples/ent_2.wav"></audio></td>
-        </tr>
-        <tr>
-          <td>Drama</td>
-          <td><audio controls src="samples/drama_1.wav"></audio></td>
-          <td><audio controls src="samples/drama_2.wav"></audio></td>
-        </tr>
-        <tr>
-          <td>Culture</td>
-          <td><audio controls src="samples/culture_1.wav"></audio></td>
-          <td><audio controls src="samples/culture_2.wav"></audio></td>
-        </tr>
-        <tr>
-          <td>Education</td>
-          <td><audio controls src="samples/edu_1.wav"></audio></td>
-          <td><audio controls src="samples/edu_2.wav"></audio></td>
-        </tr>
-      </tbody>
-    </table>
+<script type="text/javascript">
+  window.onload = function () {
+    let domains = ["Storytelling", "Entertainment", "Drama", "Culture", "Education"];
+    let samples = {
+      "Storytelling": ["story_1", "story_2"],
+      "Entertainment": ["ent_1", "ent_2"],
+      "Drama": ["drama_1", "drama_2"],
+      "Culture": ["culture_1", "culture_2"],
+      "Education": ["edu_1", "edu_2"]
+    };
+    
+    let sample_data = `
+        <thead>
+          <tr>
+            <th>Domain</th>
+            <th>Sample 1</th>
+            <th>Sample 2</th>
+          </tr>
+        </thead>
+        <tbody>
+    `;
+
+    // Loop through each domain and append rows for the table
+    for (let domain of domains) {
+      let row = `<tr>
+                   <td>${domain}</td>
+                   <td><audio controls src="samples/${domain.toLowerCase().replace(" ", "_")}_${samples[domain][0]}.wav"></audio></td>
+                   <td><audio controls src="samples/${domain.toLowerCase().replace(" ", "_")}_${samples[domain][1]}.wav"></audio></td>
+                 </tr>`;
+      sample_data += row;
+    }
+
+    sample_data += `</tbody>`;
+
+    document.getElementById('tbody').innerHTML = sample_data;
+  }
+</script>
+
 
   </section>
 </body>
