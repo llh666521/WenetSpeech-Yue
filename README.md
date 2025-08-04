@@ -27,8 +27,10 @@ Speaker Attribute Annotation includes speaker diarization, age and gender annota
 ### Speech Quality Annotation
 Speech Quality Annotation includes bandwidth detection, SNR and MOS prediction 
 ### Automatic Speech Recognition
+We select three models with the best performance on Cantonese to perform multi-system labeling: SenseVoice, TeleASR, and Whisper. For each audio file, we obtain the corresponding multi-system transcription.
 ### Text Postprocessing
 <div align="center"><img width="300px" src="https://github.com/llh666521/WenetSpeech-Yue/blob/main/figs/text_processing.svg" /></div>
+Each ASR transcription system produces outputs in different formats. To standardize these formats, we introduce a text post-processing module, which includes punctuation removal, traditional-to-simplified Chinese conversion, and text normalization. The detailed code can be found in 'text_postprocessing.py.'
 
 ### Recognizer Output Voting
 <div align="center"><img width="500px" src="https://github.com/llh666521/WenetSpeech-Yue/blob/main/figs/LLM_Corrector.svg" /></div>
