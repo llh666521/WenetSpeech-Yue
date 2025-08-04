@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<!-- saved from url=(0036)https://goldenife.github.io/SynthVC/ -->
+<html lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
+  <title>SynthVC: Leveraging Synthetic Data for End-to-End Low Latency Streaming Voice Conversion</title>
+  <meta name="generator" content="Jekyll v3.9.0">
+  <meta property="og:title" content="TODO: title">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary">
+  <!-- End Jekyll SEO tag -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#157878">
+  <link rel="stylesheet" href="./SynthVC_ Leveraging Synthetic Data for End-to-End Low Latency Streaming Voice Conversion_files/style.css">
+</head>
+
+<body data-new-gr-c-s-check-loaded="14.1001.0" data-gr-ext-installed="">
+  <section class="page-header">
+    <!-- <h1 class="project-name">Demo PAGE</h1> -->
+    <!-- <h2 class="project-tagline"></h2> -->
+  </section>
+
+  <section class="main-content">
+    <h1 id="">
+      <center>SynthVC: Leveraging Synthetic Data for End-to-End Low Latency Streaming Voice Conversion</center>
+    </h1>
+
+    <br><br>
+    <h2 id="abstract" style="text-align: center;">Abstract<a name="abstract"></a></h2>
+    <p style="text-align: justify;">Voice Conversion (VC) modifies a speaker's timbre while preserving linguistic content. While showing effectiveness in speaker similarity and robustness, most existing VC models face challenges in real-time scenarios which require low-latency streaming capabilities. Streaming VC models typically use automatic speech recognition (ASR) models to extract linguistic content or rely on speaker representation disentanglement (SRD) techniques. However, these methods often suffer from timbre leakage, high computational latency, and compromised speech naturalness. To address these limitations, we present SynthVC, a streaming end-to-end voice conversion framework that establishes direct timbre mapping between source and target speakers. Our method eliminates the reliance on complex disentanglement design through the utilization of synthetic parallel training data. Experimental results demonstrate that SynthVC achieves low latency and outperforms existing systems in both naturalness and speaker similarity. To facilitate reproducibility and community advancement, we will release the complete implementation code and pre-trained models upon publication.</p>
+
+    <center><img src="./SynthVC_ Leveraging Synthetic Data for End-to-End Low Latency Streaming Voice Conversion_files/SynthVC.png"></center><table frame="void" rules="none">
+      <tbody><tr>
+        
+      </tr>
+      <tr>
+      </tr>
+    </tbody></table>
+    <br><br>
+
+    <!-- <h2>2. Computational Metrics</h2>
+    <ul>
+      <table>
+  <tbody>
+    <tr>
+      <td></td>
+      <td>RTF</td>
+      <td>Latency (ms)</td>
+      <td>Params (M)</td>
+    </tr>
+    <tr>
+      <td>Full mode</td>
+      <td>0.797</td>
+      <td>15.94+20+20=55.94</td>
+      <td>22.7</td>
+    </tr>
+    <tr>
+      <td>&emsp;AM (w/ 2 pseudo ctx)</td>
+      <td>0.201</td>
+      <td>4.02</td>
+      <td>10.9</td>
+    </tr>
+    <tr>
+      <td>&emsp;Vocoder (w/ 2 pseudo ctx)</td>
+      <td>0.086</td>
+      <td>1.72</td>
+      <td>1.2</td>
+    </tr>
+    <tr>
+      <td>&emsp;LM</td>
+      <td>0.510</td>
+      <td>10.20</td>
+      <td>10.6</td>
+    </tr>
+    <tr>
+      <td>Stand-alone mode</td>
+      <td>0.181</td>
+      <td>3.58+20+20=43.58</td>
+      <td>12.1</td>
+    </tr>
+    <tr>
+      <td>&emsp;AM (w/o pseudo ctx)</td>
+      <td>0.134</td>
+      <td>2.68</td>
+      <td>10.9</td>
+    </tr>
+    <tr>
+      <td>&emsp;Vocoder (w/o pseudo ctx)</td>
+      <td>0.047</td>
+      <td>0.90</td>
+      <td>1.2</td>
+    </tr>
+  </tbody>
+  <colgroup>
+    <col>
+    <col>
+    <col>
+    <col>
+  </colgroup>
+</table>
+    </ul> -->
+
+    <h2 style="text-align: center;">Demo<a name="Comparison"></a></h2>
+    <p style="text-align: justify;">Here’s a synthesized sample of SynthVC streaming conversion. The source speech comes from a test set reserved before training, while the target speaker is randomly selected from the Aishell3 dataset.</p>
+
+    <table style="display: flex; justify-content: center;">
+      <tbody id="tbody">
+        <tr>
+          <td style="text-align: center; width: 180px;" rowspan="2"><strong>Source speech<strong></strong></strong></td>
+          <td style="text-align: center; width: 180px;" colspan="6"><strong>Target Speaker<strong></strong></strong></td>
+        </tr>
+        <tr>
+        <td style="text-align: center; width: 180px;" rowspan="1">female 1<audio style="width: 180px;" controls="" src="raw/samples/speakers/50.wav"></audio></td><td style="text-align: center; width: 180px;" rowspan="1">female 2<audio style="width: 180px;" controls="" src="raw/samples/speakers/64.wav"></audio></td><td style="text-align: center; width: 180px;" rowspan="1">female 3<audio style="width: 180px;" controls="" src="raw/samples/speakers/75.wav"></audio></td><td style="text-align: center; width: 180px;" rowspan="1">male 1<audio style="width: 180px;" controls="" src="raw/samples/speakers/181.wav"></audio></td><td style="text-align: center; width: 180px;" rowspan="1">male 2<audio style="width: 180px;" controls="" src="raw/samples/speakers/29.wav"></audio></td></tr><tr></tr><tr><td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/aishell3/source/aishell3-SSB0599-SSB05990162.wav"></audio></td><td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/aishell3/SynthVC/50/aishell3-SSB0599-SSB05990162.wav"></audio></td><td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/aishell3/SynthVC/64/aishell3-SSB0599-SSB05990162.wav"></audio></td><td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/aishell3/SynthVC/75/aishell3-SSB0599-SSB05990162.wav"></audio></td><td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/aishell3/SynthVC/181/aishell3-SSB0599-SSB05990162.wav"></audio></td><td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/aishell3/SynthVC/29/aishell3-SSB0599-SSB05990162.wav"></audio></td></tr><tr><td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/aishell3/source/aishell3-SSB1385-SSB13850355.wav"></audio></td><td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/aishell3/SynthVC/50/aishell3-SSB1385-SSB13850355.wav"></audio></td><td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/aishell3/SynthVC/64/aishell3-SSB1385-SSB13850355.wav"></audio></td><td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/aishell3/SynthVC/75/aishell3-SSB1385-SSB13850355.wav"></audio></td><td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/aishell3/SynthVC/181/aishell3-SSB1385-SSB13850355.wav"></audio></td><td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/aishell3/SynthVC/29/aishell3-SSB1385-SSB13850355.wav"></audio></td></tr><tr><td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/aishell3/source/aishell3-SSB0241-SSB02410464.wav"></audio></td><td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/aishell3/SynthVC/50/aishell3-SSB0241-SSB02410464.wav"></audio></td><td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/aishell3/SynthVC/64/aishell3-SSB0241-SSB02410464.wav"></audio></td><td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/aishell3/SynthVC/75/aishell3-SSB0241-SSB02410464.wav"></audio></td><td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/aishell3/SynthVC/181/aishell3-SSB0241-SSB02410464.wav"></audio></td><td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/aishell3/SynthVC/29/aishell3-SSB0241-SSB02410464.wav"></audio></td></tr><tr><td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/aishell3/source/aishell3-SSB0395-SSB03950207.wav"></audio></td><td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/aishell3/SynthVC/50/aishell3-SSB0395-SSB03950207.wav"></audio></td><td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/aishell3/SynthVC/64/aishell3-SSB0395-SSB03950207.wav"></audio></td><td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/aishell3/SynthVC/75/aishell3-SSB0395-SSB03950207.wav"></audio></td><td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/aishell3/SynthVC/181/aishell3-SSB0395-SSB03950207.wav"></audio></td><td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/aishell3/SynthVC/29/aishell3-SSB0395-SSB03950207.wav"></audio></td></tr><tr><td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/aishell3/source/aishell3-SSB0288-SSB02880241.wav"></audio></td><td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/aishell3/SynthVC/50/aishell3-SSB0288-SSB02880241.wav"></audio></td><td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/aishell3/SynthVC/64/aishell3-SSB0288-SSB02880241.wav"></audio></td><td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/aishell3/SynthVC/75/aishell3-SSB0288-SSB02880241.wav"></audio></td><td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/aishell3/SynthVC/181/aishell3-SSB0288-SSB02880241.wav"></audio></td><td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/aishell3/SynthVC/29/aishell3-SSB0288-SSB02880241.wav"></audio></td></tr><tr><td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/aishell3/source/aishell3-SSB0502-SSB05020340.wav"></audio></td><td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/aishell3/SynthVC/50/aishell3-SSB0502-SSB05020340.wav"></audio></td><td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/aishell3/SynthVC/64/aishell3-SSB0502-SSB05020340.wav"></audio></td><td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/aishell3/SynthVC/75/aishell3-SSB0502-SSB05020340.wav"></audio></td><td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/aishell3/SynthVC/181/aishell3-SSB0502-SSB05020340.wav"></audio></td><td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/aishell3/SynthVC/29/aishell3-SSB0502-SSB05020340.wav"></audio></td></tr><tr><td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/aishell3/source/aishell3-SSB1593-SSB15930158.wav"></audio></td><td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/aishell3/SynthVC/50/aishell3-SSB1593-SSB15930158.wav"></audio></td><td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/aishell3/SynthVC/64/aishell3-SSB1593-SSB15930158.wav"></audio></td><td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/aishell3/SynthVC/75/aishell3-SSB1593-SSB15930158.wav"></audio></td><td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/aishell3/SynthVC/181/aishell3-SSB1593-SSB15930158.wav"></audio></td><td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/aishell3/SynthVC/29/aishell3-SSB1593-SSB15930158.wav"></audio></td></tr><tr><td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/aishell3/source/aishell3-SSB0913-SSB09130084.wav"></audio></td><td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/aishell3/SynthVC/50/aishell3-SSB0913-SSB09130084.wav"></audio></td><td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/aishell3/SynthVC/64/aishell3-SSB0913-SSB09130084.wav"></audio></td><td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/aishell3/SynthVC/75/aishell3-SSB0913-SSB09130084.wav"></audio></td><td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/aishell3/SynthVC/181/aishell3-SSB0913-SSB09130084.wav"></audio></td><td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/aishell3/SynthVC/29/aishell3-SSB0913-SSB09130084.wav"></audio></td></tr><tr><td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/aishell3/source/aishell3-SSB0711-SSB07110298.wav"></audio></td><td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/aishell3/SynthVC/50/aishell3-SSB0711-SSB07110298.wav"></audio></td><td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/aishell3/SynthVC/64/aishell3-SSB0711-SSB07110298.wav"></audio></td><td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/aishell3/SynthVC/75/aishell3-SSB0711-SSB07110298.wav"></audio></td><td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/aishell3/SynthVC/181/aishell3-SSB0711-SSB07110298.wav"></audio></td><td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/aishell3/SynthVC/29/aishell3-SSB0711-SSB07110298.wav"></audio></td></tr><tr><td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/aishell3/source/aishell3-SSB0112-SSB01120469.wav"></audio></td><td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/aishell3/SynthVC/50/aishell3-SSB0112-SSB01120469.wav"></audio></td><td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/aishell3/SynthVC/64/aishell3-SSB0112-SSB01120469.wav"></audio></td><td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/aishell3/SynthVC/75/aishell3-SSB0112-SSB01120469.wav"></audio></td><td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/aishell3/SynthVC/181/aishell3-SSB0112-SSB01120469.wav"></audio></td><td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/aishell3/SynthVC/29/aishell3-SSB0112-SSB01120469.wav"></audio></td></tr><tr><td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/aishell3/source/aishell3-SSB0601-SSB06010151.wav"></audio></td><td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/aishell3/SynthVC/50/aishell3-SSB0601-SSB06010151.wav"></audio></td><td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/aishell3/SynthVC/64/aishell3-SSB0601-SSB06010151.wav"></audio></td><td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/aishell3/SynthVC/75/aishell3-SSB0601-SSB06010151.wav"></audio></td><td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/aishell3/SynthVC/181/aishell3-SSB0601-SSB06010151.wav"></audio></td><td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/aishell3/SynthVC/29/aishell3-SSB0601-SSB06010151.wav"></audio></td></tr><tr><td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/aishell3/source/aishell3-SSB0435-SSB04350204.wav"></audio></td><td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/aishell3/SynthVC/50/aishell3-SSB0435-SSB04350204.wav"></audio></td><td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/aishell3/SynthVC/64/aishell3-SSB0435-SSB04350204.wav"></audio></td><td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/aishell3/SynthVC/75/aishell3-SSB0435-SSB04350204.wav"></audio></td><td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/aishell3/SynthVC/181/aishell3-SSB0435-SSB04350204.wav"></audio></td><td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/aishell3/SynthVC/29/aishell3-SSB0435-SSB04350204.wav"></audio></td></tr></tbody>
+    </table> 
+
+  </section>
+
+
+<script type="" text="" javascript="">
+  window.onload = function () {
+    let scenes = ["aishell3"]
+    let speakers = ["50", "64", "75", "181", "29"]
+    let genders = ["female 1", "female 2", "female 3", "male 1", "male 2"]
+    let models = ["DualVC2", "VQMIVC", "VQMIVC-streaming", "DualVC3-full", "DualVC3-standalone"]
+    // let all_samples = [['aishell3-SSB1055-SSB10550458', 'aishell3-SSB0717-SSB07170041', 'aishell3-SSB1385-SSB13850355', 'aishell3-SSB0241-SSB02410464', 'aishell3-SSB0395-SSB03950207', 'aishell3-SSB0288-SSB02880241', 'aishell3-SSB0599-SSB05990162', 'aishell3-SSB0711-SSB07110298', 'aishell3-SSB0502-SSB05020340', 'aishell3-SSB1593-SSB15930158', 'aishell3-SSB0913-SSB09130084', 'aishell3-SSB0112-SSB01120469', 'aishell3-SSB0601-SSB06010151', 'aishell3-SSB0435-SSB04350204', 'aishell3-SSB1555-SSB15550390', 'aishell3-SSB0606-SSB06060071', 'aishell3-SSB1650-SSB16500233', 'aishell3-SSB1138-SSB11380370', 'aishell3-SSB1091-SSB10910252', 'aishell3-SSB0913-SSB09130467', 'aishell3-SSB0341-SSB03410155', 'aishell3-SSB0534-SSB05340377', 'aishell3-SSB1902-SSB19020024', 'aishell3-SSB1745-SSB17450167', 'aishell3-SSB0375-SSB03750474', 'aishell3-SSB0009-SSB00090517', 'aishell3-SSB0607-SSB06070310', 'aishell3-SSB0632-SSB06320035', 'aishell3-SSB0751-SSB07510471', 'aishell3-SSB1837-SSB18370321', 'aishell3-SSB0780-SSB07800303', 'aishell3-SSB1831-SSB18310165', 'aishell3-SSB1935-SSB19350049', 'aishell3-SSB0080-SSB00800177', 'aishell3-SSB0631-SSB06310370', 'aishell3-SSB0539-SSB05390475'], 
+    // ['aishell3-SSB1055-SSB10550458', 'aishell3-SSB0717-SSB07170041', 'aishell3-SSB1385-SSB13850355', 'aishell3-SSB0241-SSB02410464', 'aishell3-SSB0395-SSB03950207', 'aishell3-SSB0288-SSB02880241', 'aishell3-SSB0599-SSB05990162', 'aishell3-SSB0711-SSB07110298', 'aishell3-SSB0502-SSB05020340', 'aishell3-SSB1593-SSB15930158', 'aishell3-SSB0913-SSB09130084', 'aishell3-SSB0112-SSB01120469', 'aishell3-SSB0601-SSB06010151', 'aishell3-SSB0435-SSB04350204', 'aishell3-SSB1555-SSB15550390', 'aishell3-SSB0606-SSB06060071', 'aishell3-SSB1650-SSB16500233', 'aishell3-SSB1138-SSB11380370', 'aishell3-SSB1091-SSB10910252', 'aishell3-SSB0913-SSB09130467', 'aishell3-SSB0341-SSB03410155', 'aishell3-SSB0534-SSB05340377', 'aishell3-SSB1902-SSB19020024', 'aishell3-SSB1745-SSB17450167', 'aishell3-SSB0375-SSB03750474', 'aishell3-SSB0009-SSB00090517', 'aishell3-SSB0607-SSB06070310', 'aishell3-SSB0632-SSB06320035', 'aishell3-SSB0751-SSB07510471', 'aishell3-SSB1837-SSB18370321', 'aishell3-SSB0780-SSB07800303', 'aishell3-SSB1831-SSB18310165', 'aishell3-SSB1935-SSB19350049', 'aishell3-SSB0080-SSB00800177', 'aishell3-SSB0631-SSB06310370', 'aishell3-SSB0539-SSB05390475']]
+    // let all_samples = [['aishell3-SSB0599-SSB05990162', 'aishell3-SSB1385-SSB13850355', 'aishell3-SSB0241-SSB02410464', 'aishell3-SSB0395-SSB03950207', 'aishell3-SSB0288-SSB02880241', 'aishell3-SSB0502-SSB05020340', 'aishell3-SSB1593-SSB15930158', 'aishell3-SSB0913-SSB09130084', 'aishell3-SSB0711-SSB07110298', 'aishell3-SSB0112-SSB01120469', 'aishell3-SSB0601-SSB06010151', 'aishell3-SSB0435-SSB04350204', 'aishell3-SSB1555-SSB15550390', 'aishell3-SSB0606-SSB06060071', 'aishell3-SSB1650-SSB16500233', 'aishell3-SSB1138-SSB11380370', 'aishell3-SSB1091-SSB10910252', 'aishell3-SSB0913-SSB09130467', 'aishell3-SSB0341-SSB03410155', 'aishell3-SSB0534-SSB05340377', 'aishell3-SSB1902-SSB19020024', 'aishell3-SSB1745-SSB17450167', 'aishell3-SSB0375-SSB03750474', 'aishell3-SSB0009-SSB00090517', 'aishell3-SSB0607-SSB06070310', 'aishell3-SSB0632-SSB06320035', 'aishell3-SSB0751-SSB07510471', 'aishell3-SSB1837-SSB18370321', 'aishell3-SSB0780-SSB07800303', 'aishell3-SSB1831-SSB18310165', 'aishell3-SSB1935-SSB19350049', 'aishell3-SSB0080-SSB00800177', 'aishell3-SSB0631-SSB06310370', 'aishell3-SSB0539-SSB05390475'], 
+    // ['aishell3-SSB0599-SSB05990162', 'aishell3-SSB1385-SSB13850355', 'aishell3-SSB0241-SSB02410464', 'aishell3-SSB0395-SSB03950207', 'aishell3-SSB0288-SSB02880241', 'aishell3-SSB0502-SSB05020340', 'aishell3-SSB1593-SSB15930158', 'aishell3-SSB0913-SSB09130084', 'aishell3-SSB0711-SSB07110298', 'aishell3-SSB0112-SSB01120469', 'aishell3-SSB0601-SSB06010151', 'aishell3-SSB0435-SSB04350204', 'aishell3-SSB1555-SSB15550390', 'aishell3-SSB0606-SSB06060071', 'aishell3-SSB1650-SSB16500233', 'aishell3-SSB1138-SSB11380370', 'aishell3-SSB1091-SSB10910252', 'aishell3-SSB0913-SSB09130467', 'aishell3-SSB0341-SSB03410155', 'aishell3-SSB0534-SSB05340377', 'aishell3-SSB1902-SSB19020024', 'aishell3-SSB1745-SSB17450167', 'aishell3-SSB0375-SSB03750474', 'aishell3-SSB0009-SSB00090517', 'aishell3-SSB0607-SSB06070310', 'aishell3-SSB0632-SSB06320035', 'aishell3-SSB0751-SSB07510471', 'aishell3-SSB1837-SSB18370321', 'aishell3-SSB0780-SSB07800303', 'aishell3-SSB1831-SSB18310165', 'aishell3-SSB1935-SSB19350049', 'aishell3-SSB0080-SSB00800177', 'aishell3-SSB0631-SSB06310370', 'aishell3-SSB0539-SSB05390475']]
+    let all_samples = [['aishell3-SSB0599-SSB05990162', 'aishell3-SSB1385-SSB13850355', 'aishell3-SSB0241-SSB02410464', 'aishell3-SSB0395-SSB03950207', 'aishell3-SSB0288-SSB02880241', 'aishell3-SSB0502-SSB05020340', 'aishell3-SSB1593-SSB15930158', 'aishell3-SSB0913-SSB09130084', 'aishell3-SSB0711-SSB07110298', 'aishell3-SSB0112-SSB01120469', 'aishell3-SSB0601-SSB06010151', 'aishell3-SSB0435-SSB04350204'], 
+    ['aishell3-SSB0599-SSB05990162', 'aishell3-SSB1385-SSB13850355', 'aishell3-SSB0241-SSB02410464', 'aishell3-SSB0395-SSB03950207', 'aishell3-SSB0288-SSB02880241', 'aishell3-SSB0502-SSB05020340', 'aishell3-SSB1593-SSB15930158', 'aishell3-SSB0913-SSB09130084', 'aishell3-SSB0711-SSB07110298', 'aishell3-SSB0112-SSB01120469', 'aishell3-SSB0601-SSB06010151', 'aishell3-SSB0435-SSB04350204']]
+    
+    let sample_data = `
+        <tr>
+          <td style="text-align: center; width: 180px;" rowspan=2><strong>Source speech<strong></td>
+          <td style="text-align: center; width: 180px;" colspan=6><strong>Target Speaker<strong></td>
+        </tr>
+        <tr>
+        `
+    for (const id in speakers) {
+      speaker = speakers[id]
+      gender = genders[id]
+      // if (model == 'Baseline') {
+      //   model = 'IBF-VC'
+      // }
+      sample_data += '<td style="text-align: center; width: 180px;" rowspan=1>' + gender + '<audio style="width: 180px;"controls="" src="raw/samples/speakers/' + speaker + '.wav"></td>'
+                    //  '<td style="text-align: center; width: 180px;" rowspan=10>' + gender + '<audio style="width: 180px;"controls="" src="raw/samples/speakers/' + speaker + '.wav"></td>'
+    }
+    sample_data += "</tr>"
+    console.log(sample_data)
+    
+    for (let x in scenes) {
+      let scene = scenes[x]
+      let scene_data = ""
+      scene_data += '<tr>'
+      //scene_data += '<td style="text-align: center; width: 180px;" rowspan=' + 8 + '><strong>' + scene + ' Source' + '<strong></td>'
+      let samples = all_samples[x]
+      console.log(scene, samples)
+      for (let y in samples) {
+        let sample = samples[y]
+        // speaker = speakers[y]
+        scene_data += '<tr>'
+        scene_data += '<td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/' + scene + '/source/' + sample + '.wav"></td>'
+        // scene_data += '<td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/' + scene + '/source/' + sample + '"></audio></td>'
+        
+        for (let z in speakers) {
+          // if (z != 0) {
+          //   scene_data += '<tr>'
+          // }
+          speaker = speakers[z]
+          // scene_data += '<td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/' + scene + '/source/' + sample + '"></audio></td>'
+          // for (let w in models) {
+          //   let model = models[w]
+          //   scene_data += '<td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/' + scene + '/SynthVC/' + speaker + '/' + sample + '.wav' + '"></audio></td>'
+          // }
+          scene_data += '<td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/' + scene + '/SynthVC/' + speaker + '/' + sample + '.wav' + '"></audio></td>'
+          
+        }
+        scene_data += '</tr>'
+      }
+      sample_data += scene_data
+    }
+    document.getElementById('tbody').innerHTML = sample_data
+  }
+</script>
+
+
+<!-- <script type="" text/javascript>
+  window.onload = function () {
+    let scenes = ["aishell3"]
+    let speakers = ["female", "male"]
+    let genders = ["female", "male"]
+    let models = ["DualVC2", "VQMIVC", "VQMIVC-streaming", "DualVC3-full", "DualVC3-standalone"]
+    let all_samples = [["SSB00430070.wav", "SSB02460443.wav", "SSB03230482.wav", "SSB03410353.wav", "SSB03750317.wav", "SSB04700097.wav", "SSB05900051.wav", "SSB07100255.wav", "SSB07100388.wav", "SSB08170086.wav",], 
+                    ["SSB00430070.wav", "SSB02460443.wav", "SSB03230482.wav", "SSB03410353.wav", "SSB03750317.wav", "SSB04700097.wav", "SSB05900051.wav", "SSB07100255.wav", "SSB07100388.wav", "SSB08170086.wav",]]
+    let sample_data = `
+        <tr>
+          <td style="text-align: center; width: 150px;" rowspan=2><strong>Target Speaker<strong></td>
+          <td style="text-align: center; width: 150px;" rowspan=2><strong>Source Speech<strong></td>
+          <td style="text-align: center; width: 150px;" colspan=5><strong>Method<strong></td>
+        </tr>
+        <tr>
+        `
+    for (const id in models) {
+      model = models[id]
+      if (model == 'Baseline') {
+        model = 'IBF-VC'
+      }
+      sample_data += '<td style="text-align: center; width: 150px;" rowspan=1><strong>' + model + '<strong></td>'
+    }
+    sample_data += "</tr>"
+    console.log(sample_data)
+    
+    for (let x in scenes) {
+      let scene = scenes[x]
+      let scene_data = ""
+      scene_data += '<tr>'
+      //scene_data += '<td style="text-align: center; width: 150px;" rowspan=' + 8 + '><strong>' + scene + ' Source' + '<strong></td>'
+      let samples = all_samples[x]
+      console.log(scene, samples)
+      for (let y in speakers) {
+        speaker = speakers[y]
+        gender = genders[y]
+        scene_data += '<td style="text-align: center; width: 150px;" rowspan=10>' + gender + '<audio style="width: 150px;"controls="" src="raw/samples/speakers/' + speaker + '.wav"></td>'
+        for (let z in samples) {
+          if (z != 0) {
+            scene_data += '<tr>'
+          }
+          let sample = samples[z]
+          scene_data += '<td style="text-align: center"><audio style="width: 150px;" controls="" src="raw/samples/' + scene + '/source/' + sample + '"></audio></td>'
+          for (let w in models) {
+            let model = models[w]
+            scene_data += '<td style="text-align: center"><audio style="width: 150px;" controls="" src="raw/samples/' + scene + '/' + model + '/' + speaker + '/' + sample + '"></audio></td>'
+          }
+          scene_data += '</tr>'
+        }
+      }
+      sample_data += scene_data
+    }
+    document.getElementById('tbody').innerHTML = sample_data
+  }
+</script> -->
+</body></html>
