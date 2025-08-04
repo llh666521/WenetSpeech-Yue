@@ -25,6 +25,6 @@ This is the official repository 👑 for the WenetSpeech-Yue dataset and the sou
 ### Speech Quality Annotation
 ### Automatic Speech Recognition
 ### Text Postprocessing
-<div align="center"><img width="800px" src="https://github.com/llh666521/WenetSpeech-Yue/blob/main/figs/text_processing.svg" /></div>
+<div align="center"><img width="400px" src="https://github.com/llh666521/WenetSpeech-Yue/blob/main/figs/text_processing.svg" /></div>
 ###  Recognizer Output Voting
-<div align="center"><img width="800px" src="https://github.com/llh666521/WenetSpeech-Yue/blob/main/figs/LLM_Corrector.svg" /></div>
+<div align="center"><img width="400px" src="https://github.com/llh666521/WenetSpeech-Yue/blob/main/figs/LLM_Corrector.svg" /></div>
