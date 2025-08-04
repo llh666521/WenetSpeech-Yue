@@ -43,9 +43,9 @@
     </div>
 
 
-    <h2 id="dataset" style="text-align: center;">Dataset<a name="dataset"></a></h2>
+    <h2 id="dataset" style="text-align: center;">WenetSpeech-Yue<a name="dataset"></a></h2>
     <ul style="text-align: justify;">
-    <h3 style="text-align: center;">Overview<a name="overview"></a></h3>
+    <h3 style="text-align: center;">Dataset Overview<a name="overview"></a></h3>
       <li>Contains 21,800 hours of large-scale Cantonese speech corpus with rich annotations, the largest open-source resource for Cantonese speech research.</li>
       <li>Stores metadata in a single JSON file, including audio path, duration, text confidence, speaker identity, SNR, DNSMOS, age, gender, and character-level timestamps. Additional metadata tags may be added in the future.</li>
       <li>Covers ten domains: Storytelling, Entertainment, Drama, Culture, Vlog, Commentary, Education, Podcast, News, and Others.</li>
@@ -56,6 +56,43 @@
     </div>
 
     <h3 style="text-align: center;">Data Samples<a name="data_samples"></a></h3>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Domain</th>
+          <th>Sample 1</th>
+          <th>Sample 2</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Storytelling</td>
+          <td><audio controls src="samples/story_1.wav"></audio></td>
+          <td><audio controls src="samples/story_2.wav"></audio></td>
+        </tr>
+        <tr>
+          <td>Entertainment</td>
+          <td><audio controls src="samples/ent_1.wav"></audio></td>
+          <td><audio controls src="samples/ent_2.wav"></audio></td>
+        </tr>
+        <tr>
+          <td>Drama</td>
+          <td><audio controls src="samples/drama_1.wav"></audio></td>
+          <td><audio controls src="samples/drama_2.wav"></audio></td>
+        </tr>
+        <tr>
+          <td>Culture</td>
+          <td><audio controls src="samples/culture_1.wav"></audio></td>
+          <td><audio controls src="samples/culture_2.wav"></audio></td>
+        </tr>
+        <tr>
+          <td>Education</td>
+          <td><audio controls src="samples/edu_1.wav"></audio></td>
+          <td><audio controls src="samples/edu_2.wav"></audio></td>
+        </tr>
+      </tbody>
+    </table>
     
     <h2 style="text-align: center;">Demo<a name="Comparison"></a></h2>
     <p style="text-align: justify;">Here’s a synthesized sample of SynthVC streaming conversion. The source speech comes from a test set reserved before training, while the target speaker is randomly selected from the Aishell3 dataset.</p>
