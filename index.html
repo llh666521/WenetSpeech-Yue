@@ -16,6 +16,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#157878">
   <link rel="stylesheet" href="style.css">
+  <style>
+      h2, h3 {
+          text-align: center;
+          margin-left: 0;
+          margin-right: 0;
+          padding-left: 0;
+          padding-right: 0;
+      }
+  </style>
 </head>
 
 <body data-new-gr-c-s-check-loaded="14.1001.0" data-gr-ext-installed="">
@@ -52,55 +61,49 @@
     </ul>
     
     <div style="text-align:center;">
-      <img src="raw/fig/data_distribution.png" alt="WenetSpeech-Pipe">
+      <img src="raw/fig/data_distribution.png" alt="WenetSpeech-Pipe" width="600">
     </div>
 
     <h3 style="text-align: center;">Data Samples<a name="data_samples"></a></h3>
 
-    <table>
-      <thead>
-        <tr>
-          <th>Domain</th>
-          <th>Sample 1</th>
-          <th>Sample 2</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Storytelling</td>
-          <td><audio controls src="samples/story_1.wav"></audio></td>
-          <td><audio controls src="samples/story_2.wav"></audio></td>
-        </tr>
-        <tr>
-          <td>Entertainment</td>
-          <td><audio controls src="samples/ent_1.wav"></audio></td>
-          <td><audio controls src="samples/ent_2.wav"></audio></td>
-        </tr>
-        <tr>
-          <td>Drama</td>
-          <td><audio controls src="samples/drama_1.wav"></audio></td>
-          <td><audio controls src="samples/drama_2.wav"></audio></td>
-        </tr>
-        <tr>
-          <td>Culture</td>
-          <td><audio controls src="samples/culture_1.wav"></audio></td>
-          <td><audio controls src="samples/culture_2.wav"></audio></td>
-        </tr>
-        <tr>
-          <td>Education</td>
-          <td><audio controls src="samples/edu_1.wav"></audio></td>
-          <td><audio controls src="samples/edu_2.wav"></audio></td>
-        </tr>
-      </tbody>
-    </table>
-    
-    <h2 style="text-align: center;">Demo<a name="Comparison"></a></h2>
-    <p style="text-align: justify;">Here’s a synthesized sample of SynthVC streaming conversion. The source speech comes from a test set reserved before training, while the target speaker is randomly selected from the Aishell3 dataset.</p>
-
-    <table style="display: flex; justify-content: center;">
-      <tbody id="tbody">
-      </tbody>
-    </table> 
+    <div style="display: flex; justify-content: center;">
+      <table style="margin: 20px 0;">
+        <thead>
+          <tr>
+            <th>Domain</th>
+            <th>Sample 1</th>
+            <th>Sample 2</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Storytelling</td>
+            <td><audio controls src="samples/story_1.wav"></audio></td>
+            <td><audio controls src="samples/story_2.wav"></audio></td>
+          </tr>
+          <tr>
+            <td>Entertainment</td>
+            <td><audio controls src="samples/ent_1.wav"></audio></td>
+            <td><audio controls src="samples/ent_2.wav"></audio></td>
+          </tr>
+          <tr>
+            <td>Drama</td>
+            <td><audio controls src="samples/drama_1.wav"></audio></td>
+            <td><audio controls src="samples/drama_2.wav"></audio></td>
+          </tr>
+          <tr>
+            <td>Culture</td>
+            <td><audio controls src="samples/culture_1.wav"></audio></td>
+            <td><audio controls src="samples/culture_2.wav"></audio></td>
+          </tr>
+          <tr>
+            <td>Education</td>
+            <td><audio controls src="samples/edu_1.wav"></audio></td>
+            <td><audio controls src="samples/edu_2.wav"></audio></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
   </section>
 </body>
