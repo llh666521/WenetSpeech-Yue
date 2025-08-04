@@ -15,17 +15,17 @@ This is the official repository 👑 for the WenetSpeech-Yue dataset and the sou
 <div align="center"><img width="800px" src="https://github.com/llh666521/WenetSpeech-Yue/blob/main/figs/data_distribution.png" /></div>
 
 ## Benchmark
-### WSYue-ASR-eval
+### ASR Benchmark
 
-### WSYue-TTS-eval
+### TTS Benmark
 
 ## WenetSpeech-Pipe
 ### Audio Collection
 Audio Collection includes domain definition, audio crawling and VAD.
 ### Speaker Attribute Annotation
-Speaker Attribute Annotation includes speaker diarization, age and gender annotation
+Speaker Attribute Annotation includes speaker diarization, age and gender annotation.
 ### Speech Quality Annotation
-Speech Quality Annotation includes bandwidth detection, SNR and MOS prediction 
+Speech Quality Annotation includes bandwidth detection, SNR and MOS prediction. 
 ### Automatic Speech Recognition
 We select three models with the best performance on Cantonese to perform multi-system labeling: SenseVoice, TeleASR, and Whisper. For each audio file, we obtain the corresponding multi-system transcription.
 ### Text Postprocessing
