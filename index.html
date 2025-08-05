@@ -232,13 +232,18 @@
 
 
     <h2 style="text-align: center;">Demo<a name="Comparison"></a></h2>
-    <table style="display: flex; justify-content: center;">
-      <tbody id="tbody">
-      </tbody>
-    </table> 
-
-
-  </section>
+<table style="margin: 0 auto; width: 95%; border-collapse: collapse;">
+  <thead>
+    <tr id="header-row">
+      <th>Text</th>
+      <!-- JS会插入系统名 -->
+    </tr>
+  </thead>
+  <tbody id="tbody">
+    <tr><td colspan="7">Loading...</td></tr>
+  </tbody>
+</table>
+</section>
 </body>
 
 <script>
@@ -273,6 +278,7 @@
 
       // 生成表格内容
       const tbody = document.getElementById('tbody');
+      tbody.innerHTML = ""; // 清空Loading
       data.forEach(item => {
         const tr = document.createElement('tr');
         // 文本列
@@ -298,7 +304,6 @@
       document.getElementById('tbody').innerHTML = `<tr><td colspan="${systems.length+1}">Failed to load text.txt: ${err}</td></tr>`;
     });
 </script>
-</body>
 </html>
 
 
