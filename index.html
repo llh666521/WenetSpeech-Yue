@@ -94,8 +94,8 @@
               <small>原来王力宏咧系佢家中里面咧成就最低个吓哇</small>
             </td>
             <td>
-              <audio controls src="raw/samples/xg0003467_5330_19880.wav"></audio><br>
-              <small>我的职业是演员歌手今年是我入行四十周年用我拍过的一部片来说今生无悔几牛哪可好</small>
+              <audio controls src="raw/samples/xq0026600_321750_325270.wav"></audio><br>
+              <small>大约系八分钟之后或者十分钟啦佢就会开始滚翻起</small>
             </td>
           </tr>
       
@@ -152,81 +152,18 @@
 
 
     <h2 style="text-align: center;">TTS Demo<a name="Comparison"></a></h2>
-<table style="margin: 0 auto; width: 95%; border-collapse: collapse;">
-  <thead>
-    <tr id="header-row">
-      <th>Text</th>
-      <!-- JS会插入系统名 -->
-    </tr>
-  </thead>
-  <tbody id="tbody">
-    <tr><td colspan="7">Loading...</td></tr>
-  </tbody>
-</table>
-</section>
-</body>
-
-<script>
-  // 配置
-  const systems = ["ref", "Llasa-1B", "WSYue_TTS", "Cosyvoice2", "StepAudio", "EdgeTTS"];
-  const systemDisplayNames = {
-    "ref": "Reference",
-    "Llasa-1B": "Llasa-1B",
-    "WSYue_TTS": "Llasa-1B-Yue",
-    "Cosyvoice2": "Cosyvoice2",
-    "StepAudio": "Step-Audio-TTS-3B",
-    "EdgeTTS": "Edge-TTS",
-  };
-
-  // 动态生成表头
-  const headerRow = document.getElementById('header-row');
-  systems.forEach(sys => {
-    const th = document.createElement('th');
-    th.textContent = systemDisplayNames[sys] || sys;
-    headerRow.appendChild(th);
-  });
-
-  // 读取并解析text.txt
-  fetch('raw/TTS_samples/text.txt')
-    .then(response => response.text())
-    .then(text => {
-      const lines = text.trim().split('\n');
-      const data = lines.map(line => {
-        const [filename, content] = line.split('|');
-        return { filename: filename.trim(), text: content.trim() };
-      });
-
-      // 生成表格内容
-      const tbody = document.getElementById('tbody');
-      tbody.innerHTML = ""; // 清空Loading
-      data.forEach(item => {
-        const tr = document.createElement('tr');
-        // 文本列
-        const tdText = document.createElement('td');
-        tdText.className = "text-cell";
-        tdText.textContent = item.text;
-        tr.appendChild(tdText);
-
-        // 各系统音频
-        systems.forEach(sys => {
-          const td = document.createElement('td');
-          const audio = document.createElement('audio');
-          audio.controls = true;
-          audio.style.width = "180px";
-          audio.src = `raw/TTS_samples/${sys}/${item.filename}.wav`;
-          td.appendChild(audio);
-          tr.appendChild(td);
-        });
-        tbody.appendChild(tr);
-      });
-    })
-    .catch(err => {
-      document.getElementById('tbody').innerHTML = `<tr><td colspan="${systems.length+1}">Failed to load text.txt: ${err}</td></tr>`;
-    });
-</script>
-</html>
-
-<h2 style="text-align: center; margin-top: 40px;">TTS System Performance Comparison</h2>
+      <table style="margin: 0 auto; width: 95%; border-collapse: collapse;">
+        <thead>
+          <tr id="header-row">
+            <th>Text</th>
+            <!-- JS会插入系统名 -->
+          </tr>
+        </thead>
+        <tbody id="tbody">
+          <tr><td colspan="7">Loading...</td></tr>
+        </tbody>
+      </table>
+    <h2 style="text-align: center; margin-top: 40px;">TTS System Performance Comparison</h2>
 <ul style="text-align: justify; max-width: 900px; margin: 0 auto 20px auto; list-style: disc;">
   <h3 style="text-align: center;">Evaluation Overview</h3>
   <li>The table below presents both objective and subjective evaluation results of different TTS systems on the WSYue-TTS-eval benchmark. Objective metrics include Character Error Rate (CER) and speaker similarity (SIM) on both the Base and Coverage test sets. Subjective metrics include UTMOSv2, Intelligibility MOS (I-MOS), Speaker Similarity MOS (S-MOS), and Audio Naturalness MOS (A-MOS).</li>
@@ -235,7 +172,7 @@
 
 <table style="margin: 0 auto; width: 95%; border-collapse: collapse; text-align: center; font-size: 1em;">
   <caption style="caption-side: bottom; text-align: center; font-size: 1em; padding: 8px;">
-    Table 1: Objective and subjective evaluation results of different TTS systems on the WSYue-TTS-eval benchmark.
+    Objective and subjective evaluation results of different TTS systems on the WSYue-TTS-eval benchmark.
   </caption>
   <thead>
     <tr>
@@ -315,6 +252,70 @@
 <div style="max-width: 900px; margin: 0 auto; font-size: 0.95em; color: #555; text-align: left;">
   <sup>&dagger;</sup> Commercial system with a single fixed speaker; speaker similarity is not evaluated.
 </div>
+</section>
+</body>
+
+<script>
+  // 配置
+  const systems = ["ref", "Llasa-1B", "WSYue_TTS", "Cosyvoice2", "StepAudio", "EdgeTTS"];
+  const systemDisplayNames = {
+    "ref": "Reference",
+    "Llasa-1B": "Llasa-1B",
+    "WSYue_TTS": "Llasa-1B-Yue",
+    "Cosyvoice2": "Cosyvoice2",
+    "StepAudio": "Step-Audio-TTS-3B",
+    "EdgeTTS": "Edge-TTS",
+  };
+
+  // 动态生成表头
+  const headerRow = document.getElementById('header-row');
+  systems.forEach(sys => {
+    const th = document.createElement('th');
+    th.textContent = systemDisplayNames[sys] || sys;
+    headerRow.appendChild(th);
+  });
+
+  // 读取并解析text.txt
+  fetch('raw/TTS_samples/text.txt')
+    .then(response => response.text())
+    .then(text => {
+      const lines = text.trim().split('\n');
+      const data = lines.map(line => {
+        const [filename, content] = line.split('|');
+        return { filename: filename.trim(), text: content.trim() };
+      });
+
+      // 生成表格内容
+      const tbody = document.getElementById('tbody');
+      tbody.innerHTML = ""; // 清空Loading
+      data.forEach(item => {
+        const tr = document.createElement('tr');
+        // 文本列
+        const tdText = document.createElement('td');
+        tdText.className = "text-cell";
+        tdText.textContent = item.text;
+        tr.appendChild(tdText);
+
+        // 各系统音频
+        systems.forEach(sys => {
+          const td = document.createElement('td');
+          const audio = document.createElement('audio');
+          audio.controls = true;
+          audio.style.width = "180px";
+          audio.src = `raw/TTS_samples/${sys}/${item.filename}.wav`;
+          td.appendChild(audio);
+          tr.appendChild(td);
+        });
+        tbody.appendChild(tr);
+      });
+    })
+    .catch(err => {
+      document.getElementById('tbody').innerHTML = `<tr><td colspan="${systems.length+1}">Failed to load text.txt: ${err}</td></tr>`;
+    });
+</script>
+</html>
+
+
 
 
 <!-- <script type="" text/javascript>
