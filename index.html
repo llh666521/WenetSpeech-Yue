@@ -226,6 +226,94 @@
 </script>
 </html>
 
+<h2 style="text-align: center; margin-top: 40px;">TTS系统性能对比</h2>
+<p style="text-align: justify; max-width: 900px; margin: 0 auto 20px auto;">
+下表展示了在WSYue-TTS-eval基准集上，不同TTS系统的客观与主观评测结果。包括基线(Base)和覆盖(Coverage)两种测试集下的字错误率(CER)、说话人相似度(SIM)、以及多项主观评价指标（UTMOSv2, I-MOS, S-MOS, A-MOS）。其中，Edge-TTS为商业系统，仅支持单一固定说话人，因此未评测说话人相似度。Llasa-1B-Yue为本项目基于粤语大数据训练的模型，在多项指标上取得了最优表现。
+</p>
+
+<table style="margin: 0 auto; width: 95%; border-collapse: collapse; text-align: center;">
+  <caption style="caption-side: bottom; text-align: center; font-size: 1em; padding: 8px;">
+    表1：WSYue-TTS-eval基准集上各TTS系统的客观与主观评测结果。
+  </caption>
+  <thead>
+    <tr>
+      <th rowspan="2">Model</th>
+      <th colspan="2">Base</th>
+      <th colspan="2">Coverage</th>
+      <th rowspan="2">UTMOSv2</th>
+      <th rowspan="2">I-MOS</th>
+      <th rowspan="2">S-MOS</th>
+      <th rowspan="2">A-MOS</th>
+    </tr>
+    <tr>
+      <th>CER (%)</th>
+      <th>SIM</th>
+      <th>CER (%)</th>
+      <th>SIM</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Llasa-1B</td>
+      <td>53.31</td>
+      <td>0.732</td>
+      <td>43.68</td>
+      <td>0.754</td>
+      <td>2.360</td>
+      <td>2.60 &plusmn; 1.51</td>
+      <td>3.05 &plusmn; 1.37</td>
+      <td>2.32 &plusmn; 1.48</td>
+    </tr>
+    <tr>
+      <td>Step-Audio-TTS-3B</td>
+      <td>27.79</td>
+      <td>0.762</td>
+      <td>24.25</td>
+      <td>0.781</td>
+      <td>2.496</td>
+      <td>3.22 &plusmn; 1.20</td>
+      <td>3.14 &plusmn; 1.08</td>
+      <td>2.82 &plusmn; 1.19</td>
+    </tr>
+    <tr>
+      <td>CosyVoice2</td>
+      <td>14.38</td>
+      <td><b>0.812</b></td>
+      <td>13.74</td>
+      <td><b>0.826</b></td>
+      <td><b>2.989</b></td>
+      <td>3.72 &plusmn; 1.00</td>
+      <td>3.52 &plusmn; 0.86</td>
+      <td>3.22 &plusmn; 1.10</td>
+    </tr>
+    <tr>
+      <td>Edge-TTS<sup>&dagger;</sup></td>
+      <td>8.30</td>
+      <td>-</td>
+      <td>9.27</td>
+      <td>-</td>
+      <td>2.997</td>
+      <td>4.12 &plusmn; 0.78</td>
+      <td>-</td>
+      <td>3.48 &plusmn; 1.06</td>
+    </tr>
+    <tr>
+      <td><b>Llasa-1B-Yue</b></td>
+      <td><b>10.89</b></td>
+      <td>0.762</td>
+      <td><b>12.78</b></td>
+      <td>0.772</td>
+      <td>2.696</td>
+      <td><b>4.30 &plusmn; 0.63</b></td>
+      <td><b>4.11 &plusmn; 0.67</b></td>
+      <td><b>4.34 &plusmn; 0.74</b></td>
+    </tr>
+  </tbody>
+</table>
+<div style="max-width: 900px; margin: 0 auto; font-size: 0.95em; color: #555;">
+  <sup>&dagger;</sup> 商业系统，仅支持单一固定说话人，未评测说话人相似度。
+</div>
+
 
 <!-- <script type="" text/javascript>
   window.onload = function () {
