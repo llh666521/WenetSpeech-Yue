@@ -252,10 +252,10 @@
   const systemDisplayNames = {
     "ref": "Reference",
     "Cosyvoice2": "Cosyvoice2",
-    "EdgeTTS": "EdgeTTS",
+    "EdgeTTS": "Edge-TTS",
     "Llasa-1B": "Llasa-1B",
-    "StepAudio": "StepAudio",
-    "WSYue_TTS": "WSYue-TTS"
+    "StepAudio": "Step-Audio-TTS-3B",
+    "WSYue_TTS": "Llasa-1B-finetune"
   };
 
   // 动态生成表头
@@ -267,7 +267,7 @@
   });
 
   // 读取并解析text.txt
-  fetch('text.txt')
+  fetch('raw/TTS_samples/text.txt')
     .then(response => response.text())
     .then(text => {
       const lines = text.trim().split('\n');
@@ -293,7 +293,7 @@
           const audio = document.createElement('audio');
           audio.controls = true;
           audio.style.width = "180px";
-          audio.src = `${sys}/${item.filename}.wav`;
+          audio.src = `raw/TTS_samples/${sys}/${item.filename}.wav`;
           td.appendChild(audio);
           tr.appendChild(td);
         });
