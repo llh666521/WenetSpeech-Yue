@@ -241,72 +241,65 @@
   </section>
 </body>
 
-<script type="" text/javascript>
-  window.onload = function () {
-    let scenes = ["aishell3"]
-    let speakers = ["50", "64", "75", "181", "29"]
-    let genders = ["female 1", "female 2", "female 3", "male 1", "male 2"]
-    let models = ["DualVC2", "VQMIVC", "VQMIVC-streaming", "DualVC3-full", "DualVC3-standalone"]
-    // let all_samples = [['aishell3-SSB1055-SSB10550458', 'aishell3-SSB0717-SSB07170041', 'aishell3-SSB1385-SSB13850355', 'aishell3-SSB0241-SSB02410464', 'aishell3-SSB0395-SSB03950207', 'aishell3-SSB0288-SSB02880241', 'aishell3-SSB0599-SSB05990162', 'aishell3-SSB0711-SSB07110298', 'aishell3-SSB0502-SSB05020340', 'aishell3-SSB1593-SSB15930158', 'aishell3-SSB0913-SSB09130084', 'aishell3-SSB0112-SSB01120469', 'aishell3-SSB0601-SSB06010151', 'aishell3-SSB0435-SSB04350204', 'aishell3-SSB1555-SSB15550390', 'aishell3-SSB0606-SSB06060071', 'aishell3-SSB1650-SSB16500233', 'aishell3-SSB1138-SSB11380370', 'aishell3-SSB1091-SSB10910252', 'aishell3-SSB0913-SSB09130467', 'aishell3-SSB0341-SSB03410155', 'aishell3-SSB0534-SSB05340377', 'aishell3-SSB1902-SSB19020024', 'aishell3-SSB1745-SSB17450167', 'aishell3-SSB0375-SSB03750474', 'aishell3-SSB0009-SSB00090517', 'aishell3-SSB0607-SSB06070310', 'aishell3-SSB0632-SSB06320035', 'aishell3-SSB0751-SSB07510471', 'aishell3-SSB1837-SSB18370321', 'aishell3-SSB0780-SSB07800303', 'aishell3-SSB1831-SSB18310165', 'aishell3-SSB1935-SSB19350049', 'aishell3-SSB0080-SSB00800177', 'aishell3-SSB0631-SSB06310370', 'aishell3-SSB0539-SSB05390475'], 
-    // ['aishell3-SSB1055-SSB10550458', 'aishell3-SSB0717-SSB07170041', 'aishell3-SSB1385-SSB13850355', 'aishell3-SSB0241-SSB02410464', 'aishell3-SSB0395-SSB03950207', 'aishell3-SSB0288-SSB02880241', 'aishell3-SSB0599-SSB05990162', 'aishell3-SSB0711-SSB07110298', 'aishell3-SSB0502-SSB05020340', 'aishell3-SSB1593-SSB15930158', 'aishell3-SSB0913-SSB09130084', 'aishell3-SSB0112-SSB01120469', 'aishell3-SSB0601-SSB06010151', 'aishell3-SSB0435-SSB04350204', 'aishell3-SSB1555-SSB15550390', 'aishell3-SSB0606-SSB06060071', 'aishell3-SSB1650-SSB16500233', 'aishell3-SSB1138-SSB11380370', 'aishell3-SSB1091-SSB10910252', 'aishell3-SSB0913-SSB09130467', 'aishell3-SSB0341-SSB03410155', 'aishell3-SSB0534-SSB05340377', 'aishell3-SSB1902-SSB19020024', 'aishell3-SSB1745-SSB17450167', 'aishell3-SSB0375-SSB03750474', 'aishell3-SSB0009-SSB00090517', 'aishell3-SSB0607-SSB06070310', 'aishell3-SSB0632-SSB06320035', 'aishell3-SSB0751-SSB07510471', 'aishell3-SSB1837-SSB18370321', 'aishell3-SSB0780-SSB07800303', 'aishell3-SSB1831-SSB18310165', 'aishell3-SSB1935-SSB19350049', 'aishell3-SSB0080-SSB00800177', 'aishell3-SSB0631-SSB06310370', 'aishell3-SSB0539-SSB05390475']]
-    // let all_samples = [['aishell3-SSB0599-SSB05990162', 'aishell3-SSB1385-SSB13850355', 'aishell3-SSB0241-SSB02410464', 'aishell3-SSB0395-SSB03950207', 'aishell3-SSB0288-SSB02880241', 'aishell3-SSB0502-SSB05020340', 'aishell3-SSB1593-SSB15930158', 'aishell3-SSB0913-SSB09130084', 'aishell3-SSB0711-SSB07110298', 'aishell3-SSB0112-SSB01120469', 'aishell3-SSB0601-SSB06010151', 'aishell3-SSB0435-SSB04350204', 'aishell3-SSB1555-SSB15550390', 'aishell3-SSB0606-SSB06060071', 'aishell3-SSB1650-SSB16500233', 'aishell3-SSB1138-SSB11380370', 'aishell3-SSB1091-SSB10910252', 'aishell3-SSB0913-SSB09130467', 'aishell3-SSB0341-SSB03410155', 'aishell3-SSB0534-SSB05340377', 'aishell3-SSB1902-SSB19020024', 'aishell3-SSB1745-SSB17450167', 'aishell3-SSB0375-SSB03750474', 'aishell3-SSB0009-SSB00090517', 'aishell3-SSB0607-SSB06070310', 'aishell3-SSB0632-SSB06320035', 'aishell3-SSB0751-SSB07510471', 'aishell3-SSB1837-SSB18370321', 'aishell3-SSB0780-SSB07800303', 'aishell3-SSB1831-SSB18310165', 'aishell3-SSB1935-SSB19350049', 'aishell3-SSB0080-SSB00800177', 'aishell3-SSB0631-SSB06310370', 'aishell3-SSB0539-SSB05390475'], 
-    // ['aishell3-SSB0599-SSB05990162', 'aishell3-SSB1385-SSB13850355', 'aishell3-SSB0241-SSB02410464', 'aishell3-SSB0395-SSB03950207', 'aishell3-SSB0288-SSB02880241', 'aishell3-SSB0502-SSB05020340', 'aishell3-SSB1593-SSB15930158', 'aishell3-SSB0913-SSB09130084', 'aishell3-SSB0711-SSB07110298', 'aishell3-SSB0112-SSB01120469', 'aishell3-SSB0601-SSB06010151', 'aishell3-SSB0435-SSB04350204', 'aishell3-SSB1555-SSB15550390', 'aishell3-SSB0606-SSB06060071', 'aishell3-SSB1650-SSB16500233', 'aishell3-SSB1138-SSB11380370', 'aishell3-SSB1091-SSB10910252', 'aishell3-SSB0913-SSB09130467', 'aishell3-SSB0341-SSB03410155', 'aishell3-SSB0534-SSB05340377', 'aishell3-SSB1902-SSB19020024', 'aishell3-SSB1745-SSB17450167', 'aishell3-SSB0375-SSB03750474', 'aishell3-SSB0009-SSB00090517', 'aishell3-SSB0607-SSB06070310', 'aishell3-SSB0632-SSB06320035', 'aishell3-SSB0751-SSB07510471', 'aishell3-SSB1837-SSB18370321', 'aishell3-SSB0780-SSB07800303', 'aishell3-SSB1831-SSB18310165', 'aishell3-SSB1935-SSB19350049', 'aishell3-SSB0080-SSB00800177', 'aishell3-SSB0631-SSB06310370', 'aishell3-SSB0539-SSB05390475']]
-    let all_samples = [['aishell3-SSB0599-SSB05990162', 'aishell3-SSB1385-SSB13850355', 'aishell3-SSB0241-SSB02410464', 'aishell3-SSB0395-SSB03950207', 'aishell3-SSB0288-SSB02880241', 'aishell3-SSB0502-SSB05020340', 'aishell3-SSB1593-SSB15930158', 'aishell3-SSB0913-SSB09130084', 'aishell3-SSB0711-SSB07110298', 'aishell3-SSB0112-SSB01120469', 'aishell3-SSB0601-SSB06010151', 'aishell3-SSB0435-SSB04350204'], 
-    ['aishell3-SSB0599-SSB05990162', 'aishell3-SSB1385-SSB13850355', 'aishell3-SSB0241-SSB02410464', 'aishell3-SSB0395-SSB03950207', 'aishell3-SSB0288-SSB02880241', 'aishell3-SSB0502-SSB05020340', 'aishell3-SSB1593-SSB15930158', 'aishell3-SSB0913-SSB09130084', 'aishell3-SSB0711-SSB07110298', 'aishell3-SSB0112-SSB01120469', 'aishell3-SSB0601-SSB06010151', 'aishell3-SSB0435-SSB04350204']]
-    
-    let sample_data = `
-        <tr>
-          <td style="text-align: center; width: 180px;" rowspan=2><strong>Source speech<strong></td>
-          <td style="text-align: center; width: 180px;" colspan=6><strong>Target Speaker<strong></td>
-        </tr>
-        <tr>
-        `
-    for (const id in speakers) {
-      speaker = speakers[id]
-      gender = genders[id]
-      // if (model == 'Baseline') {
-      //   model = 'IBF-VC'
-      // }
-      sample_data += '<td style="text-align: center; width: 180px;" rowspan=1>' + gender + '<audio style="width: 180px;"controls="" src="raw/samples/speakers/' + speaker + '.wav"></td>'
-                    //  '<td style="text-align: center; width: 180px;" rowspan=10>' + gender + '<audio style="width: 180px;"controls="" src="raw/samples/speakers/' + speaker + '.wav"></td>'
-    }
-    sample_data += "</tr>"
-    console.log(sample_data)
-    
-    for (let x in scenes) {
-      let scene = scenes[x]
-      let scene_data = ""
-      scene_data += '<tr>'
-      //scene_data += '<td style="text-align: center; width: 180px;" rowspan=' + 8 + '><strong>' + scene + ' Source' + '<strong></td>'
-      let samples = all_samples[x]
-      console.log(scene, samples)
-      for (let y in samples) {
-        let sample = samples[y]
-        // speaker = speakers[y]
-        scene_data += '<tr>'
-        scene_data += '<td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/' + scene + '/source/' + sample + '.wav"></td>'
-        // scene_data += '<td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/' + scene + '/source/' + sample + '"></audio></td>'
-        
-        for (let z in speakers) {
-          // if (z != 0) {
-          //   scene_data += '<tr>'
-          // }
-          speaker = speakers[z]
-          // scene_data += '<td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/' + scene + '/source/' + sample + '"></audio></td>'
-          // for (let w in models) {
-          //   let model = models[w]
-          //   scene_data += '<td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/' + scene + '/SynthVC/' + speaker + '/' + sample + '.wav' + '"></audio></td>'
-          // }
-          scene_data += '<td style="text-align: center"><audio style="width: 180px;" controls="" src="raw/samples/' + scene + '/SynthVC/' + speaker + '/' + sample + '.wav' + '"></audio></td>'
-          
-        }
-        scene_data += '</tr>'
-      }
-      sample_data += scene_data
-    }
-    document.getElementById('tbody').innerHTML = sample_data
-  }
+<script>
+  // 配置
+  const systems = ["ref", "Cosyvoice2", "EdgeTTS", "Llasa-1B", "StepAudio", "WSYue_TTS"];
+  const systemDisplayNames = {
+    "ref": "Reference",
+    "Cosyvoice2": "Cosyvoice2",
+    "EdgeTTS": "EdgeTTS",
+    "Llasa-1B": "Llasa-1B",
+    "StepAudio": "StepAudio",
+    "WSYue_TTS": "WSYue-TTS"
+  };
+
+  // 动态生成表头
+  const headerRow = document.getElementById('header-row');
+  systems.forEach(sys => {
+    const th = document.createElement('th');
+    th.textContent = systemDisplayNames[sys] || sys;
+    headerRow.appendChild(th);
+  });
+
+  // 读取并解析text.txt
+  fetch('text.txt')
+    .then(response => response.text())
+    .then(text => {
+      const lines = text.trim().split('\n');
+      const data = lines.map(line => {
+        const [filename, content] = line.split('|');
+        return { filename: filename.trim(), text: content.trim() };
+      });
+
+      // 生成表格内容
+      const tbody = document.getElementById('tbody');
+      data.forEach(item => {
+        const tr = document.createElement('tr');
+        // 文本列
+        const tdText = document.createElement('td');
+        tdText.className = "text-cell";
+        tdText.textContent = item.text;
+        tr.appendChild(tdText);
+
+        // 各系统音频
+        systems.forEach(sys => {
+          const td = document.createElement('td');
+          const audio = document.createElement('audio');
+          audio.controls = true;
+          audio.style.width = "180px";
+          audio.src = `${sys}/${item.filename}.wav`;
+          td.appendChild(audio);
+          tr.appendChild(td);
+        });
+        tbody.appendChild(tr);
+      });
+    })
+    .catch(err => {
+      document.getElementById('tbody').innerHTML = `<tr><td colspan="${systems.length+1}">Failed to load text.txt: ${err}</td></tr>`;
+    });
 </script>
+</body>
+</html>
 
 
 <!-- <script type="" text/javascript>
