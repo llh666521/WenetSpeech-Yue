@@ -6,24 +6,74 @@ This is the official repository 👑 for the WenetSpeech-Yue dataset and the sou
 ## Download
 
 ## Leaderboard
-| Model                                | #Params (M) | In-House | | Open-Source | | | | | | WSYue-ASR-eval ||
-|--------------------------------------|:-----------:|:--------:|:--------:|:-----------:|:-------:|:-------:|:---------:|:--------:|:--------:|:--------:|
-|                                      |             | Dialogue| Reading |    yue     |  zh-HK  |  MDCC   | Daily_Use | Commands |  Short   |   Long   |
-| **w/o LLM**                          |             |         |         |            |         |         |           |          |          |          |
-| Paraformer                           | 220         | 83.22    | 51.97   | 70.16      | 68.49   | 47.67   | 79.31     | 69.32    | 73.64    | 89.00    |
-| SenseVoice-small                     | 234         | 21.08    | __6.52__| 8.05       | **7.34**| 6.34    | 5.74      | __6.65__ | 6.69     | 9.95     |
-| Dolphin-small                        | 372         | 59.20    | 7.38    | 39.69      | 51.29   | 26.39   | 7.21      | 9.68     | 32.32    | 58.20    |
-| U2pp-Conformer-Yue                   | 130         | **16.57**| 7.82    | 7.72       | 11.42   | 5.73    | 5.73      | 8.97     | __5.05__ | 8.89     |
-| TeleASR                              | 700         | 37.18    | 7.27    | 7.02       | __7.88__| 6.25    | 8.02      | **5.98** | 6.23     | 11.33    |
-| Whisper-medium                       | 769         | 75.50    | 68.69   | 59.44      | 62.50   | 62.31   | 64.41     | 80.41    | 80.82    | 50.96    |
-| Whisper-medium-Yue                   | 769         | 18.69    | 6.86    | __6.86__   | 11.03   | __5.49__| __4.70__ | 8.51     | __5.05__ | __8.05__ |
-| FireRedASR-AED-L                     | 1100        | 73.70    | 18.72   | 43.93      | 43.33   | 34.53   | 48.05     | 49.99    | 55.37    | 50.26    |
-| Whisper-large-v3                     | 1550        | 45.09    | 15.46   | 12.85      | 16.36   | 14.63   | 17.84     | 20.70    | 12.95    | 26.86    |
-| **w/ LLM**                           |             |         |         |            |         |         |           |          |          |          |
-| Qwen2.5-Omni-3B                      | 3000        | 72.01    | 7.49    | 12.59      | 11.75   | 38.91   | 10.59     | 25.78    | 67.95    | 88.46    |
-| Kimi-Audio                           | 7000        | 68.65    | 24.34   | 40.90      | 38.72   | 30.72   | 44.29     | 45.54    | 50.86    | 33.49    |
-| FireRedASR-LLM-L                     | 8300        | 73.70    | 18.72   | 43.93      | 43.33   | 34.53   | 48.05     | 49.99    | 49.87    | 45.92    |
-| U2pp-Conformer-LLM-Yue               | 4200        | __17.22__| **6.21**| **6.23**   | 9.52    | **4.35**| **4.57**  | 6.98     | **4.73** | **7.91** |
+<table border="1" cellspacing="0" cellpadding="6">
+  <tr>
+    <th align="left" rowspan="2">Model</th>
+    <th align="center" rowspan="2">#Params (M)</th>
+    <th align="center" colspan="2">In-House</th>
+    <th align="center" colspan="5">Open-Source</th>
+    <th align="center" colspan="2">WSYue-ASR-eval</th>
+  </tr>
+  <tr>
+    <th align="center">Dialogue</th>
+    <th align="center">Reading</th>
+    <th align="center">yue</th>
+    <th align="center">zh-HK</th>
+    <th align="center">MDCC</th>
+    <th align="center">Daily_Use</th>
+    <th align="center">Commands</th>
+    <th align="center">Short</th>
+    <th align="center">Long</th>
+  </tr>
+
+  <tr><td align="left" colspan="11"><b>w/o LLM</b></td></tr>
+
+  <tr>
+    <td align="left">Paraformer</td><td align="center">220</td><td align="center">83.22</td><td align="center">51.97</td><td align="center">70.16</td><td align="center">68.49</td><td align="center">47.67</td><td align="center">79.31</td><td align="center">69.32</td><td align="center">73.64</td><td align="center">89.00</td>
+  </tr>
+  <tr>
+    <td align="left">SenseVoice-small</td><td align="center">234</td><td align="center">21.08</td><td align="center"><u>6.52</u></td><td align="center">8.05</td><td align="center"><b>7.34</b></td><td align="center">6.34</td><td align="center">5.74</td><td align="center"><u>6.65</u></td><td align="center">6.69</td><td align="center">9.95</td>
+  </tr>
+  <tr>
+    <td align="left">Dolphin-small</td><td align="center">372</td><td align="center">59.20</td><td align="center">7.38</td><td align="center">39.69</td><td align="center">51.29</td><td align="center">26.39</td><td align="center">7.21</td><td align="center">9.68</td><td align="center">32.32</td><td align="center">58.20</td>
+  </tr>
+  <tr>
+    <td align="left"><b>U2pp-Conformer-Yue</b></td><td align="center">130</td><td align="center"><b>16.57</b></td><td align="center">7.82</td><td align="center">7.72</td><td align="center">11.42</td><td align="center">5.73</td><td align="center">5.73</td><td align="center">8.97</td><td align="center"><u>5.05</u></td><td align="center">8.89</td>
+  </tr>
+
+  <tr>
+    <td align="left">TeleASR</td><td align="center">700</td><td align="center">37.18</td><td align="center">7.27</td><td align="center">7.02</td><td align="center"><u>7.88</u></td><td align="center">6.25</td><td align="center">8.02</td><td align="center"><b>5.98</b></td><td align="center">6.23</td><td align="center">11.33</td>
+  </tr>
+  <tr>
+    <td align="left">Whisper-medium</td><td align="center">769</td><td align="center">75.50</td><td align="center">68.69</td><td align="center">59.44</td><td align="center">62.50</td><td align="center">62.31</td><td align="center">64.41</td><td align="center">80.41</td><td align="center">80.82</td><td align="center">50.96</td>
+  </tr>
+  <tr>
+    <td align="left"><b>Whisper-medium-Yue</b></td><td align="center">769</td><td align="center">18.69</td><td align="center">6.86</td><td align="center"><u>6.86</u></td><td align="center">11.03</td><td align="center"><u>5.49</u></td><td align="center"><u>4.70</u></td><td align="center">8.51</td><td align="center"><u>5.05</u></td><td align="center"><u>8.05</u></td>
+  </tr>
+
+  <tr>
+    <td align="left">FireRedASR-AED-L</td><td align="center">1100</td><td align="center">73.70</td><td align="center">18.72</td><td align="center">43.93</td><td align="center">43.33</td><td align="center">34.53</td><td align="center">48.05</td><td align="center">49.99</td><td align="center">55.37</td><td align="center">50.26</td>
+  </tr>
+  <tr>
+    <td align="left">Whisper-large-v3</td><td align="center">1550</td><td align="center">45.09</td><td align="center">15.46</td><td align="center">12.85</td><td align="center">16.36</td><td align="center">14.63</td><td align="center">17.84</td><td align="center">20.70</td><td align="center">12.95</td><td align="center">26.86</td>
+  </tr>
+
+  <tr><td align="left" colspan="11"><b>w/ LLM</b></td></tr>
+
+  <tr>
+    <td align="left">Qwen2.5-Omni-3B</td><td align="center">3000</td><td align="center">72.01</td><td align="center">7.49</td><td align="center">12.59</td><td align="center">11.75</td><td align="center">38.91</td><td align="center">10.59</td><td align="center">25.78</td><td align="center">67.95</td><td align="center">88.46</td>
+  </tr>
+  <tr>
+    <td align="left">Kimi-Audio</td><td align="center">7000</td><td align="center">68.65</td><td align="center">24.34</td><td align="center">40.90</td><td align="center">38.72</td><td align="center">30.72</td><td align="center">44.29</td><td align="center">45.54</td><td align="center">50.86</td><td align="center">33.49</td>
+  </tr>
+  <tr>
+    <td align="left">FireRedASR-LLM-L</td><td align="center">8300</td><td align="center">73.70</td><td align="center">18.72</td><td align="center">43.93</td><td align="center">43.33</td><td align="center">34.53</td><td align="center">48.05</td><td align="center">49.99</td><td align="center">49.87</td><td align="center">45.92</td>
+  </tr>
+  <tr>
+    <td align="left"><b>U2pp-Conformer-LLM-Yue</b></td><td align="center">4200</td><td align="center"><u>17.22</u></td><td align="center"><b>6.21</b></td><td align="center"><b>6.23</b></td><td align="center">9.52</td><td align="center"><b>4.35</b></td><td align="center"><b>4.57</b></td><td align="center">6.98</td><td align="center"><b>4.73</b></td><td align="center"><b>7.91</b></td>
+  </tr>
+</table>
+
 
 
 
