@@ -18,7 +18,7 @@ This is the official repository 👑 for the WenetSpeech-Yue dataset and the sou
     <th align="center">Dialogue</th>
     <th align="center">Reading</th>
     <th align="center">yue</th>
-    <th align="center">zh-HK</th>
+    <th align="center">HK</th>
     <th align="center">MDCC</th>
     <th align="center">Daily_Use</th>
     <th align="center">Commands</th>
@@ -48,7 +48,7 @@ This is the official repository 👑 for the WenetSpeech-Yue dataset and the sou
     <td align="left">Whisper-medium</td><td align="center">769</td><td align="center">75.50</td><td align="center">68.69</td><td align="center">59.44</td><td align="center">62.50</td><td align="center">62.31</td><td align="center">64.41</td><td align="center">80.41</td><td align="center">80.82</td><td align="center">50.96</td>
   </tr>
   <tr bgcolor="#d9ead3">
-    <td align="left"><b>Whisper-medium-Yue</b></td><td align="center">769</td><td align="center">18.69</td><td align="center">6.86</td><td align="center"><u>6.86</u></td><td align="center">11.03</td><td align="center"><u>5.49</u></td><td align="center"><u>4.70</u></td><td align="center">8.51</td><td align="center"><u>5.05</u></td><td align="center"><u>8.05</u></td>
+    <td align="left"><b>Whisper-m-Yue</b></td><td align="center">769</td><td align="center">18.69</td><td align="center">6.86</td><td align="center"><u>6.86</u></td><td align="center">11.03</td><td align="center"><u>5.49</u></td><td align="center"><u>4.70</u></td><td align="center">8.51</td><td align="center"><u>5.05</u></td><td align="center"><u>8.05</u></td>
   </tr>
 
   <tr bgcolor="#f2f2f2">
