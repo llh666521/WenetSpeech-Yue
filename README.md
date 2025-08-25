@@ -38,7 +38,7 @@ This is the official repository 👑 for the WenetSpeech-Yue dataset and the sou
     <td align="left">Dolphin-small</td><td align="center">372</td><td align="center">59.20</td><td align="center">7.38</td><td align="center">39.69</td><td align="center">51.29</td><td align="center">26.39</td><td align="center">7.21</td><td align="center">9.68</td><td align="center">32.32</td><td align="center">58.20</td>
   </tr>
   <tr bgcolor="#d9ead3">
-    <td align="left"><b>U2pp-Conformer-Yue</b></td><td align="center">130</td><td align="center"><b>16.57</b></td><td align="center">7.82</td><td align="center">7.72</td><td align="center">11.42</td><td align="center">5.73</td><td align="center">5.73</td><td align="center">8.97</td><td align="center"><u>5.05</u></td><td align="center">8.89</td>
+    <td align="left"><b>Conformer-Yue</b></td><td align="center">130</td><td align="center"><b>16.57</b></td><td align="center">7.82</td><td align="center">7.72</td><td align="center">11.42</td><td align="center">5.73</td><td align="center">5.73</td><td align="center">8.97</td><td align="center"><u>5.05</u></td><td align="center">8.89</td>
   </tr>
 
   <tr bgcolor="#f2f2f2">
@@ -70,7 +70,7 @@ This is the official repository 👑 for the WenetSpeech-Yue dataset and the sou
     <td align="left">FireRedASR-LLM-L</td><td align="center">8300</td><td align="center">73.70</td><td align="center">18.72</td><td align="center">43.93</td><td align="center">43.33</td><td align="center">34.53</td><td align="center">48.05</td><td align="center">49.99</td><td align="center">49.87</td><td align="center">45.92</td>
   </tr>
   <tr bgcolor="#d9ead3">
-    <td align="left"><b>U2pp-Conformer-LLM-Yue</b></td><td align="center">4200</td><td align="center"><u>17.22</u></td><td align="center"><b>6.21</b></td><td align="center"><b>6.23</b></td><td align="center">9.52</td><td align="center"><b>4.35</b></td><td align="center"><b>4.57</b></td><td align="center">6.98</td><td align="center"><b>4.73</b></td><td align="center"><b>7.91</b></td>
+    <td align="left"><b>Conformer-LLM-Yue</b></td><td align="center">4200</td><td align="center"><u>17.22</u></td><td align="center"><b>6.21</b></td><td align="center"><b>6.23</b></td><td align="center">9.52</td><td align="center"><b>4.35</b></td><td align="center"><b>4.57</b></td><td align="center">6.98</td><td align="center"><b>4.73</b></td><td align="center"><b>7.91</b></td>
   </tr>
 </table>
 
