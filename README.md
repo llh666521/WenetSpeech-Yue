@@ -36,11 +36,11 @@ This is the official repository 👑 for the WenetSpeech-Yue dataset and the sou
   <tr>
     <td align="left">SenseVoice-small</td><td align="center">234</td><td align="center">21.08</td><td align="center"><ins>6.52</ins></td><td align="center">8.05</td><td align="center"><b>7.34</b></td><td align="center">6.34</td><td align="center">5.74</td><td align="center"><ins>6.65</ins></td><td align="center">6.69</td><td align="center">9.95</td>
   <tr>
-    <td align="left"><b>SenseVoice-s-Yue⭐</b></td><td align="center">234</td><td align="center">19.19</td><td align="center">6.71</td><td align="center">6.87</td><td align="center">8.68</td><td align="center">5.43</td><td align="center">7.21</td><td align="center">9.68</td><td align="center">19.19</td><td align="center">58.20</td>
+    <td align="left"><b>SenseVoice-s-Yue⭐</b></td><td align="center">234</td><td align="center">19.19</td><td align="center">6.71</td><td align="center">6.87</td><td align="center">8.68</td><td align="center">5.43</td><td align="center">5.24</td><td align="center">6.93</td><td align="center">5.23</td><td align="center">8.63</td>
   </tr>
   </tr>
   <tr>
-    <td align="left">Dolphin-small</td><td align="center">372</td><td align="center">59.20</td><td align="center">7.38</td><td align="center">39.69</td><td align="center">51.29</td><td align="center">26.39</td><td align="center">5.24</td><td align="center">6.93</td><td align="center">5.23</td><td align="center">8.63</td>
+    <td align="left">Dolphin-small</td><td align="center">372</td><td align="center">59.20</td><td align="center">7.38</td><td align="center">39.69</td><td align="center">51.29</td><td align="center">26.39</td><td align="center">7.21</td><td align="center">9.68</td><td align="center">32.32</td><td align="center">58.20</td>
   </tr>
   <tr>
     <td align="left">TeleASR</td><td align="center">700</td><td align="center">37.18</td><td align="center">7.27</td><td align="center">7.02</td><td align="center"><ins>7.88</ins></td><td align="center">6.25</td><td align="center">8.02</td><td align="center"><b>5.98</b></td><td align="center">6.23</td><td align="center">11.33</td>
