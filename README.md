@@ -7,8 +7,21 @@ This is the official repository 👑 for the WenetSpeech-Yue dataset and the sou
 
 ## Leaderboard
 <table border="0" cellspacing="0" cellpadding="6">
+  <colgroup>
+    <col style="width:200px;"> <!-- Model -->
+    <col style="width:90px;">  <!-- #Params -->
+    <col style="width:90px;">  <!-- Dialogue -->
+    <col style="width:90px;">  <!-- Reading -->
+    <col style="width:80px;">  <!-- yue -->
+    <col style="width:80px;">  <!-- zh-HK -->
+    <col style="width:80px;">  <!-- MDCC -->
+    <col style="width:90px;">  <!-- Daily_Use -->
+    <col style="width:90px;">  <!-- Commands -->
+    <col style="width:80px;">  <!-- Short -->
+    <col style="width:80px;">  <!-- Long -->
+  </colgroup>
   <tr>
-    <th align="left" rowspan="2" style="width:200px;">Model</th>
+    <th align="left" rowspan="2">Model</th>
     <th align="center" rowspan="2">#Params (M)</th>
     <th align="center" colspan="2">In-House</th>
     <th align="center" colspan="5">Open-Source</th>
