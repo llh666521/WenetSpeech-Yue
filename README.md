@@ -12,7 +12,7 @@ This is the official repository 👑 for the WenetSpeech-Yue dataset and the sou
     <th align="center" rowspan="2">#Params (M)</th>
     <th align="center" colspan="2">In-House</th>
     <th align="center" colspan="5">Open-Source</th>
-    <th align="center" colspan="2"">WSYue-ASReval</th>
+    <th align="center" colspan="2"">WSYue-eval</th>
   </tr>
   <tr>
     <th align="center">Dialogue</th>
