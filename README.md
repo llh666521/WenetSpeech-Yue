@@ -6,23 +6,76 @@ This is the official repository 👑 for the WenetSpeech-Yue dataset and the sou
 ## Download
 
 ## Leaderboard
-| Model                      | #Params (M) | Dialogue   | Reading   | yue        | zh-HK      | MDCC      | Daily_Use | Commands  | Short     | Long      |
-|----------------------------|:-----------:|:----------:|:---------:|:----------:|:----------:|:---------:|:---------:|:---------:|:---------:|:---------:|
-| **w/o LLM**                |             |            |           |            |            |           |           |           |           |           |
-| Paraformer                 | 220         | 83.22      | 51.97     | 70.16      | 68.49      | 47.67     | 79.31     | 69.32     | 73.64     | 89.00     |
-| SenseVoice-small           | 234         | 21.08      | __6.52__  | 8.05       | **7.34**   | 6.34      | 5.74      | __6.65__  | 6.69      | 9.95      |
-| Dolphin-small              | 372         | 59.20      | 7.38      | 39.69      | 51.29      | 26.39     | 7.21      | 9.68      | 32.32     | 58.20     |
-| **U2pp-Conformer-Yue**     | 130         | **16.57**  | 7.82      | 7.72       | 11.42      | 5.73      | 5.73      | 8.97      | __5.05__  | 8.89      |
-| TeleASR                    | 700         | 37.18      | 7.27      | 7.02       | __7.88__   | 6.25      | 8.02      | **5.98**  | 6.23      | 11.33     |
-| Whisper-medium             | 769         | 75.50      | 68.69     | 59.44      | 62.50      | 62.31     | 64.41     | 80.41     | 80.82     | 50.96     |
-| **Whisper-medium-Yue**     | 769         | 18.69      | 6.86      | __6.86__   | 11.03      | __5.49__  | __4.70__  | 8.51      | __5.05__  | __8.05__  |
-| FireRedASR-AED-L           | 1100        | 73.70      | 18.72     | 43.93      | 43.33      | 34.53     | 48.05     | 49.99     | 55.37     | 50.26     |
-| Whisper-large-v3           | 1550        | 45.09      | 15.46     | 12.85      | 16.36      | 14.63     | 17.84     | 20.70     | 12.95     | 26.86     |
-| **w/ LLM**                 |             |            |           |            |            |           |           |           |           |           |
-| Qwen2.5-Omni-3B            | 3000        | 72.01      | 7.49      | 12.59      | 11.75      | 38.91     | 10.59     | 25.78     | 67.95     | 88.46     |
-| Kimi-Audio                 | 7000        | 68.65      | 24.34     | 40.90      | 38.72      | 30.72     | 44.29     | 45.54     | 50.86     | 33.49     |
-| FireRedASR-LLM-L           | 8300        | 73.70      | 18.72     | 43.93      | 43.33      | 34.53     | 48.05     | 49.99     | 49.87     | 45.92     |
-| **U2pp-Conformer-LLM-Yue** | 4200        | __17.22__  | **6.21**  | **6.23**   | 9.52       | **4.35**  | **4.57**  | 6.98      | **4.73**  | **7.91**  |
+<table border="1" cellspacing="0" cellpadding="4">
+  <tr>
+    <th rowspan="2">Model</th>
+    <th rowspan="2">#Params (M)</th>
+    <th colspan="2">In-House</th>
+    <th colspan="5">Open-Source</th>
+    <th colspan="2">WSYue-ASR-eval</th>
+  </tr>
+  <tr>
+    <th>Dialogue</th>
+    <th>Reading</th>
+    <th>yue</th>
+    <th>zh-HK</th>
+    <th>MDCC</th>
+    <th>Daily_Use</th>
+    <th>Commands</th>
+    <th>Short</th>
+    <th>Long</th>
+  </tr>
+
+  <!-- w/o LLM -->
+  <tr><td colspan="11"><b>w/o LLM</b></td></tr>
+
+  <tr bgcolor="#f2f2f2">
+    <td>Paraformer</td><td>220</td><td>83.22</td><td>51.97</td><td>70.16</td><td>68.49</td><td>47.67</td><td>79.31</td><td>69.32</td><td>73.64</td><td>89.00</td>
+  </tr>
+  <tr bgcolor="#f2f2f2">
+    <td>SenseVoice-small</td><td>234</td><td>21.08</td><td><u>6.52</u></td><td>8.05</td><td><b>7.34</b></td><td>6.34</td><td>5.74</td><td><u>6.65</u></td><td>6.69</td><td>9.95</td>
+  </tr>
+  <tr bgcolor="#f2f2f2">
+    <td>Dolphin-small</td><td>372</td><td>59.20</td><td>7.38</td><td>39.69</td><td>51.29</td><td>26.39</td><td>7.21</td><td>9.68</td><td>32.32</td><td>58.20</td>
+  </tr>
+  <tr bgcolor="#d9ead3">
+    <td><b>U2pp-Conformer-Yue</b></td><td>130</td><td><b>16.57</b></td><td>7.82</td><td>7.72</td><td>11.42</td><td>5.73</td><td>5.73</td><td>8.97</td><td><u>5.05</u></td><td>8.89</td>
+  </tr>
+
+  <tr bgcolor="#f2f2f2">
+    <td>TeleASR</td><td>700</td><td>37.18</td><td>7.27</td><td>7.02</td><td><u>7.88</u></td><td>6.25</td><td>8.02</td><td><b>5.98</b></td><td>6.23</td><td>11.33</td>
+  </tr>
+  <tr bgcolor="#f2f2f2">
+    <td>Whisper-medium</td><td>769</td><td>75.50</td><td>68.69</td><td>59.44</td><td>62.50</td><td>62.31</td><td>64.41</td><td>80.41</td><td>80.82</td><td>50.96</td>
+  </tr>
+  <tr bgcolor="#d9ead3">
+    <td><b>Whisper-medium-Yue</b></td><td>769</td><td>18.69</td><td>6.86</td><td><u>6.86</u></td><td>11.03</td><td><u>5.49</u></td><td><u>4.70</u></td><td>8.51</td><td><u>5.05</u></td><td><u>8.05</u></td>
+  </tr>
+
+  <tr bgcolor="#f2f2f2">
+    <td>FireRedASR-AED-L</td><td>1100</td><td>73.70</td><td>18.72</td><td>43.93</td><td>43.33</td><td>34.53</td><td>48.05</td><td>49.99</td><td>55.37</td><td>50.26</td>
+  </tr>
+  <tr bgcolor="#f2f2f2">
+    <td>Whisper-large-v3</td><td>1550</td><td>45.09</td><td>15.46</td><td>12.85</td><td>16.36</td><td>14.63</td><td>17.84</td><td>20.70</td><td>12.95</td><td>26.86</td>
+  </tr>
+
+  <!-- w/ LLM -->
+  <tr><td colspan="11"><b>w/ LLM</b></td></tr>
+
+  <tr bgcolor="#f2f2f2">
+    <td>Qwen2.5-Omni-3B</td><td>3000</td><td>72.01</td><td>7.49</td><td>12.59</td><td>11.75</td><td>38.91</td><td>10.59</td><td>25.78</td><td>67.95</td><td>88.46</td>
+  </tr>
+  <tr bgcolor="#f2f2f2">
+    <td>Kimi-Audio</td><td>7000</td><td>68.65</td><td>24.34</td><td>40.90</td><td>38.72</td><td>30.72</td><td>44.29</td><td>45.54</td><td>50.86</td><td>33.49</td>
+  </tr>
+  <tr bgcolor="#f2f2f2">
+    <td>FireRedASR-LLM-L</td><td>8300</td><td>73.70</td><td>18.72</td><td>43.93</td><td>43.33</td><td>34.53</td><td>48.05</td><td>49.99</td><td>49.87</td><td>45.92</td>
+  </tr>
+  <tr bgcolor="#d9ead3">
+    <td><b>U2pp-Conformer-LLM-Yue</b></td><td>4200</td><td><u>17.22</u></td><td><b>6.21</b></td><td><b>6.23</b></td><td>9.52</td><td><b>4.35</b></td><td><b>4.57</b></td><td>6.98</td><td><b>4.73</b></td><td><b>7.91</b></td>
+  </tr>
+</table>
+
 
 
 
