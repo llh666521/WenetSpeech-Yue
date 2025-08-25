@@ -36,7 +36,7 @@ This is the official repository 👑 for the WenetSpeech-Yue dataset and the sou
   <tr>
     <td align="left">SenseVoice-small</td><td align="center">234</td><td align="center">21.08</td><td align="center"><ins>6.52</ins></td><td align="center">8.05</td><td align="center"><b>7.34</b></td><td align="center">6.34</td><td align="center">5.74</td><td align="center"><ins>6.65</ins></td><td align="center">6.69</td><td align="center">9.95</td>
   <tr>
-    <td align="left"><b>Dolphin-small-Yue⭐</b></td><td align="center">234</td><td align="center">19.19</td><td align="center">6.71</td><td align="center">6.87</td><td align="center">8.68</td><td align="center">5.43</td><td align="center">7.21</td><td align="center">9.68</td><td align="center">19.19</td><td align="center">58.20</td>
+    <td align="left"><b>SenseVoice-s-Yue⭐</b></td><td align="center">234</td><td align="center">19.19</td><td align="center">6.71</td><td align="center">6.87</td><td align="center">8.68</td><td align="center">5.43</td><td align="center">7.21</td><td align="center">9.68</td><td align="center">19.19</td><td align="center">58.20</td>
   </tr>
   </tr>
   <tr>
