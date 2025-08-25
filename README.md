@@ -92,7 +92,25 @@ This is the official repository 👑 for the WenetSpeech-Yue dataset and the sou
 ### TTS Benmark
 
 # Inference
-```bash # Run recognition python wenet/bin/recognize.py --gpu 0 \ --modes $decode_modes \ --config $dir/train.yaml \ --data_type $data_type \ --test_data $test_set/data.list \ --checkpoint $decode_checkpoint \ --beam_size 10 \ --batch_size 32 \ --blank_penalty 0.0 \ --ctc_weight $ctc_weight \ --reverse_weight $reverse_weight \ --result_dir $test_result_dir \ ${decoding_chunk_size:+--decoding_chunk_size $decoding_chunk_size} ```
+```
+dir=exp/WenetSpeech_Yue
+dict=data/dict_$en_modeling_unit/lang_char.txt
+decode_modes="attention_rescoring"
+decode_checkpoint=$dir/WSYue.pt
+
+python wenet/bin/recognize.py --gpu 0 \
+  -- modes $decode_modes \
+  -- config $dir/train.yaml \
+  -- test_data $test_set/data.list \
+  --checkpoint $decode_checkpoint \
+  --beam_size 10 \
+  --batch_size 32 \
+  --blank_penalty 0.0 \
+  --ctc_weight 0.5 \
+  --reverse_weight 0.0 \
+  --result_dir $test_result_dir \
+  ${decoding_chunk_size:+--decoding_chunk_size -1} 
+```
 
 ## WenetSpeech-Pipe
 ### Audio Collection
