@@ -36,7 +36,7 @@ This is the official repository 👑 for the WenetSpeech-Yue dataset and the sou
   <tr>
     <td align="left">SenseVoice-small</td><td align="center">234</td><td align="center">21.08</td><td align="center"><ins>6.52</ins></td><td align="center">8.05</td><td align="center"><b>7.34</b></td><td align="center">6.34</td><td align="center">5.74</td><td align="center"><ins>6.65</ins></td><td align="center">6.69</td><td align="center">9.95</td>
   <tr>
-    <td align="left"><b>SenseVoice-s-Yue⭐</b></td><td align="center">234</td><td align="center">19.19</td><td align="center">6.71</td><td align="center">6.87</td><td align="center">8.68</td><td align="center">5.43</td><td align="center">5.24</td><td align="center">6.93</td><td align="center">5.23</td><td align="center">8.63</td>
+    <td align="left"><b>SenseVoice-s-Yue⭐</b></td><td align="center">234</td><td align="center">19.19</td><td align="center">6.71</td><td align="center">6.87</td><td align="center">8.68</td><td align="center"><ins>5.43</ins></td><td align="center">5.24</td><td align="center">6.93</td><td align="center">5.23</td><td align="center">8.63</td>
   </tr>
   </tr>
   <tr>
@@ -49,7 +49,7 @@ This is the official repository 👑 for the WenetSpeech-Yue dataset and the sou
     <td align="left">Whisper-medium</td><td align="center">769</td><td align="center">75.50</td><td align="center">68.69</td><td align="center">59.44</td><td align="center">62.50</td><td align="center">62.31</td><td align="center">64.41</td><td align="center">80.41</td><td align="center">80.82</td><td align="center">50.96</td>
   </tr>
   <tr>
-    <td align="left"><b>Whisper-m-Yue⭐</b></td><td align="center">769</td><td align="center">18.69</td><td align="center">6.86</td><td align="center"><ins>6.86</ins></td><td align="center">11.03</td><td align="center"><ins>5.49</ins></td><td align="center"><ins>4.70</ins></td><td align="center">8.51</td><td align="center"><ins>5.05</ins></td><td align="center"><ins>8.05</ins></td>
+    <td align="left"><b>Whisper-m-Yue⭐</b></td><td align="center">769</td><td align="center">18.69</td><td align="center">6.86</td><td align="center"><ins>6.86</ins></td><td align="center">11.03</td><td align="center">5.49</td><td align="center"><ins>4.70</ins></td><td align="center">8.51</td><td align="center"><ins>5.05</ins></td><td align="center"><ins>8.05</ins></td>
   </tr>
 
   <tr>
