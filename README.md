@@ -8,7 +8,7 @@ This is the official repository 👑 for the WenetSpeech-Yue dataset and the sou
 ## Leaderboard
 <table border="0" cellspacing="0" cellpadding="6">
   <tr>
-    <th align="left" rowspan="2">Model</th>
+    <th align="left" rowspan="2" style="width:200px;">Model</th>
     <th align="center" rowspan="2">#Params (M)</th>
     <th align="center" colspan="2">In-House</th>
     <th align="center" colspan="5">Open-Source</th>
