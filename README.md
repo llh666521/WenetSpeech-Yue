@@ -66,7 +66,7 @@ This is the official repository 👑 for the WenetSpeech-Yue dataset and the sou
   <tr bgcolor="#f2f2f2">
     <td align="left">Kimi-Audio</td><td align="center">7000</td><td align="center">68.65</td><td align="center">24.34</td><td align="center">40.90</td><td align="center">38.72</td><td align="center">30.72</td><td align="center">44.29</td><td align="center">45.54</td><td align="center">50.86</td><td align="center">33.49</td>
   </tr>
-  <tr bgcolor="#f2f2f2">
+  <tr style="background-color:#f2f2f2;">
     <td align="left">FireRedASR-LLM-L</td><td align="center">8300</td><td align="center">73.70</td><td align="center">18.72</td><td align="center">43.93</td><td align="center">43.33</td><td align="center">34.53</td><td align="center">48.05</td><td align="center">49.99</td><td align="center">49.87</td><td align="center">45.92</td>
   </tr>
   <tr>
