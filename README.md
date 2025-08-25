@@ -6,14 +6,14 @@ This is the official repository 👑 for the WenetSpeech-Yue dataset and the sou
 ## Download
 
 ## Leaderboard
-| Model                                | #Params (M) |        In-House        |             Open-Source             |                |                |                |                |    WSYue-ASR-eval    |          |
+| Model                                | #Params (M) |        In-House        |                   |        Open-Source        |                |                |                |    WSYue-ASR-eval    |          |
 |--------------------------------------|:-----------:|:----------------------:|:----------------------------------:|:--------------:|:--------------:|:--------------:|:--------------:|:-------------------:|:--------:|
 |                                      |             | Dialogue   | Reading |   yue   |  zh-HK  |  MDCC  | Daily_Use | Commands |   Short   |   Long    |
 | **w/o LLM**                          |             |            |         |         |        |        |           |          |           |           |
 | $$\color{gray}{\text{Paraformer}}$$  | 220         | 83.22      | 51.97   | 70.16   | 68.49  | 47.67  | 79.31     | 69.32    | 73.64     | 89.00     |
 | $$\color{gray}{\text{SenseVoice-small}}$$ | 234    | 21.08      | __6.52__| 8.05    | **7.34** | 6.34  | 5.74      | __6.65__ | 6.69      | 9.95      |
 | $$\color{gray}{\text{Dolphin-small}}$$    | 372    | 59.20      | 7.38    | 39.69   | 51.29  | 26.39  | 7.21      | 9.68     | 32.32     | 58.20     |
-| $$\color{green}{\textbf{U2pp-Conformer-Yue}}$$ | 130 | **16.57** | 7.82    | 7.72    | 11.42  | 5.73  | 5.73      | 8.97     | __5.05__  | 8.89      |
+| U2pp-Conformer-Yue | 130 | **16.57** | 7.82    | 7.72    | 11.42  | 5.73  | 5.73      | 8.97     | __5.05__  | 8.89      |
 | $$\color{gray}{\text{TeleASR}}$$     | 700         | 37.18      | 7.27    | 7.02    | __7.88__ | 6.25  | 8.02      | **5.98** | 6.23      | 11.33     |
 | $$\color{gray}{\text{Whisper-medium}}$$ | 769     | 75.50      | 68.69   | 59.44   | 62.50  | 62.31  | 64.41     | 80.41    | 80.82     | 50.96     |
 | $$\color{green}{\textbf{Whisper-medium-Yue}}$$ | 769 | 18.69 | 6.86 | __6.86__ | 11.03 | __5.49__ | __4.70__ | 8.51 | __5.05__ | __8.05__ |
