@@ -6,7 +6,7 @@ This is the official repository 👑 for the WenetSpeech-Yue dataset and the sou
 ## Download
 
 ## Leaderboard
-| Model                                | #Params (M) | In-House || Open-Source |||||| WSYue-ASR-eval ||
+| Model                                | #Params (M) | In-House | | Open-Source | | | | | | WSYue-ASR-eval ||
 |--------------------------------------|:-----------:|:--------:|:--------:|:-----------:|:-------:|:-------:|:---------:|:--------:|:--------:|:--------:|
 |                                      |             | Dialogue| Reading |    yue     |  zh-HK  |  MDCC   | Daily_Use | Commands |  Short   |   Long   |
 | **w/o LLM**                          |             |         |         |            |         |         |           |          |          |          |
