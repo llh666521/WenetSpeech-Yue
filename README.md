@@ -70,7 +70,7 @@ This is the official repository 👑 for the WenetSpeech-Yue dataset and the sou
     <td align="left">FireRedASR-LLM-L</td><td align="center">8300</td><td align="center">73.70</td><td align="center">18.72</td><td align="center">43.93</td><td align="center">43.33</td><td align="center">34.53</td><td align="center">48.05</td><td align="center">49.99</td><td align="center">49.87</td><td align="center">45.92</td>
   </tr>
   <tr>
-    <td align="left"><b>Conformer-LLM-Yue</b></td><td align="center">4200</td><td align="center"><ins>17.22</ins>ins></td><td align="center"><b>6.21</b></td><td align="center"><b>6.23</b></td><td align="center">9.52</td><td align="center"><b>4.35</b></td><td align="center"><b>4.57</b></td><td align="center">6.98</td><td align="center"><b>4.73</b></td><td align="center"><b>7.91</b></td>
+    <td align="left"><b>Conformer-LLM-Yue</b></td><td align="center">4200</td><td align="center"><ins>17.22</ins></td><td align="center"><b>6.21</b></td><td align="center"><b>6.23</b></td><td align="center">9.52</td><td align="center"><b>4.35</b></td><td align="center"><b>4.57</b></td><td align="center">6.98</td><td align="center"><b>4.73</b></td><td align="center"><b>7.91</b></td>
   </tr>
 </table>
 
