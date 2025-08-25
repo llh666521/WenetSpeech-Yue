@@ -34,7 +34,7 @@ This is the official repository 👑 for the WenetSpeech-Yue dataset and the sou
   <tr bgcolor="#f2f2f2">
     <td align="left">SenseVoice-small</td><td align="center">234</td><td align="center">21.08</td><td align="center"><u>6.52</u></td><td align="center">8.05</td><td align="center"><b>7.34</b></td><td align="center">6.34</td><td align="center">5.74</td><td align="center"><u>6.65</u></td><td align="center">6.69</td><td align="center">9.95</td>
   </tr>
-  <tr style="background-color:red">
+  <tr bgcolor="#FF0000">
     <td align="left">Dolphin-small</td><td align="center">372</td><td align="center">59.20</td><td align="center">7.38</td><td align="center">39.69</td><td align="center">51.29</td><td align="center">26.39</td><td align="center">7.21</td><td align="center">9.68</td><td align="center">32.32</td><td align="center">58.20</td>
   </tr>
   <tr bgcolor="#d9ead3">
