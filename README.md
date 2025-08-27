@@ -9,6 +9,7 @@ WenetSpeech-Pipe Overview:
 ## Download
 * The dataset is available at [HuggingFace](https://huggingface.co/datasets/ASLP-lab/WenetSpeech-Yue).
 * The ASR models are available at [HuggingFace](https://huggingface.co/ASLP-lab/WSYue-ASR).
+* The TTS models are available at [HuggingFace](https://huggingface.co/ASLP-lab/WSYue-TTS-Cosyvoice2) and [HuggingFace](https://huggingface.co/ASLP-lab/WSYue-TTS-Cosyvoice2-zjg).
 
 ## Leaderboard
 <table border="0" cellspacing="0" cellpadding="6" style="border-collapse:collapse;">
