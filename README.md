@@ -96,14 +96,21 @@ WenetSpeech-Pipe Overview:
 To address the unique linguistic characteristics of Cantonese, we propose WSYue-eval, a comprehensive benchmark encompassing both Automatic Speech Recognition (ASR) and Text-to-Speech (TTS) tasks.
 
 ### ASR Benchmark
-We introduce WSYue-ASR-eval, a test set developed for Automatic Speech Recognition (ASR) as a key task in speech understanding. It features multi-round manual annotations including text transcripts, emotion, age, and gender labels. The set is divided into Short and Long subsets by audio duration to enable comprehensive evaluation across speech lengths. WSYue-ASR-eval also covers diverse real-world Cantonese scenarios, including code-switching and multi-domain conditions.
+We introduce WSYue-ASR-eval, a test set developed for Automatic Speech Recognition (ASR) as a key task in speech understanding. It features **multi-round manual annotations** including text transcripts, emotion, age, and gender labels. The set is divided into Short and Long subsets by audio duration to enable comprehensive evaluation across speech lengths. WSYue-ASR-eval also covers diverse real-world Cantonese scenarios, including code-switching and multi-domain conditions.
 
 | Set   | Duration | Speakers | Hours |
 |-------|----------|----------|-------|
 | Short | 0–10s    | 2861     | 9.46  |
 | Long  | 10–30s   | 838      | 1.97  |
 
-### TTS Benmark
+### TTS Benchmark
+We introduce WSYue-TTS-eval, a zero-shot Cantonese TTS benchmark with two subsets:
+
+- Base:  
+  Contains 1,000 samples from Common Voice for evaluating real-world performance.
+
+- Coverage:  
+  Combines manually curated and LLM-generated texts spanning multiple domains (e.g., daily life, news, entertainment, poetry) and incorporates diverse linguistic phenomena including polyphonic characters, tone sandhi, code-switching, proper nouns, and numerals.
 
 # Inference
 ```
