@@ -112,24 +112,21 @@ We introduce WSYue-TTS-eval, a zero-shot Cantonese TTS benchmark with two subset
 ### U2pp_Conformer_Yue
 ```
 dir=exp/u2pp_conformer_yue
-dict=lang_char.txt
-decode_modes="attention_rescoring"
 decode_checkpoint=$dir/WSYue.pt
 test_set=path/to/test_set
 test_result_dir=path/to/test_result_dir
 
-python wenet/bin/recognize.py --gpu 0 \
-  -- modes $decode_modes \
-  -- config $dir/train.yaml \
-  -- test_data $test_set/data.list \
+python wenet/bin/recognize.py \
+  --gpu 0 \
+  --modes attention_rescoring \
+  --config $dir/train.yaml \
+  --test_data $test_set/data.list \
   --checkpoint $decode_checkpoint \
   --beam_size 10 \
   --batch_size 32 \
-  --blank_penalty 0.0 \
   --ctc_weight 0.5 \
-  --reverse_weight 0.0 \
   --result_dir $test_result_dir \
-  ${decoding_chunk_size:+--decoding_chunk_size -1} 
+  --decoding_chunk_size -1
 ```
 
 ## WenetSpeech-Pipe
