@@ -108,12 +108,15 @@ We introduce WSYue-TTS-eval, a zero-shot Cantonese TTS benchmark with two subset
 - Base: Contains 1,000 samples from Common Voice for evaluating real-world performance.
 - Coverage: Combines manually curated and LLM-generated texts spanning multiple domains (e.g., daily life, news, entertainment, poetry) and incorporates diverse linguistic phenomena including polyphonic characters, tone sandhi, code-switching, proper nouns, and numerals.
 
-# Inference
+## ASR Inference
+### U2pp_Conformer_Yue
 ```
-dir=exp/WenetSpeech_Yue
-dict=data/dict_$en_modeling_unit/lang_char.txt
+dir=exp/u2pp_conformer_yue
+dict=lang_char.txt
 decode_modes="attention_rescoring"
 decode_checkpoint=$dir/WSYue.pt
+test_set=path/to/test_set
+test_result_dir=path/to/test_result_dir
 
 python wenet/bin/recognize.py --gpu 0 \
   -- modes $decode_modes \
