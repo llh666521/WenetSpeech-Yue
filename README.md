@@ -105,10 +105,8 @@ We introduce WSYue-ASR-eval, a test set developed for Automatic Speech Recogniti
 
 ### TTS Benchmark
 We introduce WSYue-TTS-eval, a zero-shot Cantonese TTS benchmark with two subsets:
-- Base:  
-  Contains 1,000 samples from Common Voice for evaluating real-world performance.
-- Coverage:  
-  Combines manually curated and LLM-generated texts spanning multiple domains (e.g., daily life, news, entertainment, poetry) and incorporates diverse linguistic phenomena including polyphonic characters, tone sandhi, code-switching, proper nouns, and numerals.
+- Base: Contains 1,000 samples from Common Voice for evaluating real-world performance.
+- Coverage: Combines manually curated and LLM-generated texts spanning multiple domains (e.g., daily life, news, entertainment, poetry) and incorporates diverse linguistic phenomena including polyphonic characters, tone sandhi, code-switching, proper nouns, and numerals.
 
 # Inference
 ```
