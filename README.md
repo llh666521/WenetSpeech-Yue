@@ -98,6 +98,11 @@ To address the unique linguistic characteristics of Cantonese, we propose WSYue-
 ### ASR Benchmark
 As a representative task for speech understanding, we developed the WSYue-ASR-eval test set for Automatic Speech Recognition (ASR). WSYue-eval undergoes multi-round manual annotation, providing high-quality text transcripts alongside emotion, age, and gender labels. To support comprehensive evaluation across different speech lengths, it is divided into Short and Long subsets based on audio duration. Moreover, WSYue-ASR-eval captures the diversity of Cantonese usage by including Cantonese–English code-switching and multi-domain scenarios, ensuring robust assessment under real-world conditions.
 
+| Set   | Duration | Speakers | Hours |
+|-------|----------|----------|-------|
+| Short | 0–10s    | 2861     | 9.46  |
+| Long  | 10–30s   | 838      | 1.97  |
+
 ### TTS Benmark
 
 # Inference
