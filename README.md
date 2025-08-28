@@ -93,7 +93,10 @@ WenetSpeech-Pipe Overview:
 <div align="center"><img width="800px" src="https://github.com/llh666521/WenetSpeech-Yue/blob/main/figs/data_distribution.png" /></div>
 
 ## Benchmark
+To address the unique linguistic characteristics of Cantonese, we propose WSYue-eval, a comprehensive benchmark encompassing both Automatic Speech Recognition (ASR) and Text-to-Speech (TTS) tasks. WSYue-eval undergoes multi-round manual annotation, providing high-quality text transcripts alongside emotion, age, and gender labels. To support comprehensive evaluation across different speech lengths, it is divided into Short and Long subsets based on audio duration (see Table 2). Moreover, WSYue-ASR-eval captures the diversity of Cantonese usage by including Cantonese–English code-switching and multi-domain scenarios, ensuring robust assessment under real-world conditions.
+
 ### ASR Benchmark
+As a representative task for speech understanding, we developed the WSYue-ASR-eval test set for Automatic Speech Recognition (ASR).
 
 ### TTS Benmark
 
