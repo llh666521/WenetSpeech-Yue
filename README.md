@@ -131,7 +131,7 @@ python wenet/bin/recognize.py --gpu 0 \
 
 ## WenetSpeech-Pipe
 ### Audio Collection
-WenetSpeech-Pipe collects large-scale, multi-domain in-the-wild speech recordings. These long recordings are segmented into short clips with VAD, yielding utterance-level data for transcription and quality evaluation.
+WenetSpeech-Pipe collects large-scale, in-the-wild speech recordings across diverse domains such as storytelling, drama, commentary, vlogs, food, entertainment, news, and education. These long recordings are segmented into short clips with VAD, yielding utterance-level data for transcription and quality evaluation.
 ### Speaker Attribute Annotation
 Speaker Attribute Annotation includes speaker diarization, age and gender annotation.
 ### Speech Quality Annotation
