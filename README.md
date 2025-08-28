@@ -135,7 +135,8 @@ WenetSpeech-Pipe collects large-scale, in-the-wild speech recordings across dive
 <div align="center"><img width="600px" src="https://github.com/llh666521/WenetSpeech-Yue/blob/main/figs/domain_distribution.svg" /></div>
 
 ### Speaker Attribute Annotation
-Speaker Attribute Annotation includes speaker diarization, age and gender annotation.
+To enrich the dataset with speaker-level metadata for multi-speaker modeling and style-aware synthesis, WenetSpeech-Pipe includes a Speaker Attributes Annotation stage. Using [pyannote](https://github.com/pyannote/pyannote-audio) toolkit for speaker diarization and [Vox-Profile](https://github.com/tiantiaf0627/vox-profile-release) for age and gender estimation, each utterance-level segment is annotated with speaker identity, age, and gender, enabling supervised and style-controllable speech modeling.
+
 ### Speech Quality Annotation
 Speech Quality Annotation includes bandwidth detection, SNR and MOS prediction. 
 ### Automatic Speech Recognition
