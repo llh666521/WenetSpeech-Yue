@@ -111,8 +111,8 @@ We introduce WSYue-TTS-eval, a zero-shot Cantonese TTS benchmark with two subset
 ## ASR Inference
 ### U2pp_Conformer_Yue
 ```
-dir=exp/u2pp_conformer_yue
-decode_checkpoint=$dir/WSYue.pt
+dir=u2pp_conformer_yue
+decode_checkpoint=$dir/u2pp_conformer_yue.pt
 test_set=path/to/test_set
 test_result_dir=path/to/test_result_dir
 
@@ -128,6 +128,27 @@ python wenet/bin/recognize.py \
   --result_dir $test_result_dir \
   --decoding_chunk_size -1
 ```
+### Whisper_Medium_Yue
+'''
+dir=whisper_medium_yue
+decode_checkpoint=$dir/whisper_medium_yue.pt
+test_set=path/to/test_set
+test_result_dir=path/to/test_result_dir
+
+python wenet/bin/recognize.py \
+  --gpu 0 \
+  --modes attention \
+  --config $dir/train.yaml \
+  --test_data $test_set/data.list \
+  --checkpoint $decode_checkpoint \
+  --beam_size 10 \
+  --batch_size 32 \
+  --blank_penalty 0.0 \
+  --ctc_weight 0.0 \
+  --reverse_weight 0.0 \
+  --result_dir $test_result_dir \
+  --decoding_chunk_size -1
+'''
 
 ## WenetSpeech-Pipe
 ### Audio Collection
