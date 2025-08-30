@@ -129,7 +129,7 @@ python wenet/bin/recognize.py \
   --decoding_chunk_size -1
 ```
 ### Whisper_Medium_Yue
-'''
+```
 dir=whisper_medium_yue
 decode_checkpoint=$dir/whisper_medium_yue.pt
 test_set=path/to/test_set
@@ -148,7 +148,7 @@ python wenet/bin/recognize.py \
   --reverse_weight 0.0 \
   --result_dir $test_result_dir \
   --decoding_chunk_size -1
-'''
+```
 
 ## WenetSpeech-Pipe
 ### Audio Collection
